@@ -722,6 +722,9 @@ section{
   }
 
 }
+@media (max-width:991px){
+
+}
 
 /* Our core Values */
 .article{
@@ -895,9 +898,9 @@ h2 {
   font-size: 1.5rem;
 }
 
-@media(max-width: 991px) {
+@media(max-width:991px) {
   .team .wrapper{
-      grid-template-columns: repeat(2,1fr);
+      grid-template-columns: repeat(1,1fr);
   }
 }
 /*Our Partners*/
@@ -977,7 +980,7 @@ h2 {
 
 #charity {
   padding: 5rem 0 10rem 0;
-  background-color: #f5e509;
+  background-color: #ccc232d7;
 }
 
 #charity h2 {
@@ -1009,17 +1012,17 @@ h2 {
   
 }
 
-.img-container {
-  margin: 0 1rem;
+.img-container{
+  margin: 0 2rem;
   position: relative;
  
 }
 
 .img-content {
   position: absolute;
-  top: 70%;
+  top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -5%);
   opacity: 0;
   z-index: 2;
   text-align: center;
@@ -1029,8 +1032,8 @@ h2 {
 }
 
 .img-content h3 {
-  color: #292424;
-  font-size: 3rem;
+  color: #435e5c;
+  font-size: 2rem;
 }
 
 .img-content a {
@@ -1045,13 +1048,13 @@ h2 {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.871);
+  background: rgba(94, 122, 173, 0.871);
   opacity: 0;
   z-index: 1;
 
   transform: scaleY(0);
   transform-origin: 100% 100%;
-  transition: all 0.3s ease-in-out;
+  transition: all 0.9s ease-in-out;
 }
 
 .img-container:hover::after {
@@ -1226,12 +1229,19 @@ h2 {
   object-fit: cover;
   object-position: center;
 }
+.area-menu-container .area-img :hover {
+  box-shadow: 0 0 15px black; 
+  transform: scale(1.30);
+}
 
 .area-menu-item {
   display: flex;
-  flex: 1 1 600px;
-  justify-content: space-evenly;
-  margin-bottom: 3rem;
+  flex: 1 2 250px;
+  justify-content:space-evenly;
+  margin-bottom: 0.1rem;
+  
+  padding: 6rem;
+  flex-direction: column;
 }
 
 .area-description {
@@ -1245,9 +1255,9 @@ h2 {
 }
 
 .area-description p {
-  font-size: 1.4rem;
+  font-size: 1.1rem;
   color: #555;
-  font-weight: 500;
+  font-weight: 300;
 }
 
 .area-description  {
