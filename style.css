@@ -569,7 +569,7 @@ section{
 .showcase-area {
   height: 80vh;
   background: 
-    url("images/shelb.jpg");
+    url("images/fen.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -989,7 +989,7 @@ h2 {
   font-weight: 400;
   margin-bottom: 40px;
   text-transform: uppercase;
-  color: #555;
+  color: #494949;
 }
 #charity p{
   text-align: center;
@@ -1022,7 +1022,7 @@ h2 {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -5%);
+  transform: translate(-50%, 55%);
   opacity: 0;
   z-index: 2;
   text-align: center;
@@ -1032,7 +1032,7 @@ h2 {
 }
 
 .img-content h3 {
-  color: #435e5c;
+  color: #06f0e0;
   font-size: 2rem;
 }
 
@@ -1223,8 +1223,8 @@ h2 {
 
 .area-menu-container img {
   display: block;
-  width: 250px;
-  height: 250px;
+  width: 270px;
+  height: 270px;
   border-radius: 50%;
   object-fit: cover;
   object-position: center;
