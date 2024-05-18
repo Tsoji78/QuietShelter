@@ -10,7 +10,7 @@
 
 header{
   z-index: 999;
-  position: absolute;
+  position: fixed;
   background-color: #0c0816ad;
   top: 0;
   left: 20;
@@ -39,7 +39,7 @@ section{
   display: flex;
   justify-content: center;
   flex-direction: column;
-  background: rgb(0, 140, 255, 0.959);
+  
 }
 .home:before{
   z-index: 777;
@@ -70,11 +70,13 @@ section{
    letter-spacing: 3px;
    line-height: 75px;
    margin-bottom: 40px;
+   font-style: italic;
 }
 
 .home .content h1 span{
   font-size: 1.2em;
   font-weight: 600 ;
+  font-style: italic;
 }
 
 .home .content p{
@@ -147,7 +149,7 @@ section{
   border-radius: 50%;
   cursor: pointer;
   box-shadow: 0 0 2px rgba(255,255,255,0.5);
-  transition: 0.3s ease;
+  transition: 0.1s ease;
 }
 
 .slider-navigation .nav-btn.active{
@@ -164,15 +166,15 @@ section{
 }
 
 .img-slide{
-  position: absolute;
+  position: relative;
   width: 100%;
   clip-path: circle(0% at 0 50%);
 }
 
 .img-slide.active{
-  clip-path: circle(150% at 0 50%);
-  transition: 2s ease;
-  transition-property: clip-path;
+  clip-path: circle(200% at 0 50%);
+  transition: 1s ease;
+  transition-property:none;
 }
 
 @media(max-width: 1040px){
@@ -186,6 +188,40 @@ section{
     right: 15px;
   }
  
+}
+@media (max-width: 468px){
+  header{
+    padding: 10px 15px;
+  }
+  section{
+    padding: 70px 15px;
+  }
+ .home .media-icons{
+    right: 15px;
+  }
+  .home .content h1{
+    font-size: 2em;
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    line-height: 75px;
+    margin-bottom: -10px;
+    font-style: italic;
+ }
+ 
+ .home .content h1 span{
+   font-size: 0.5em;
+   font-weight: 600 ;
+   font-style: italic;
+ }
+ 
+ .home .content p{
+   margin-bottom: 25px;
+ }
+ 
+  
+  
+
 }
 .navigation__checkbox {
   display:none;
