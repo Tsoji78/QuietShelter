@@ -64,18 +64,18 @@ section{
 }
 
 .home .content h1{
-   font-size: 4.5em;
+   font-size: 2.5em;
    font-weight: 400;
    text-transform: uppercase;
    letter-spacing: 1px;
-   line-height:70px;
+   line-height:45px;
    margin-bottom: 30px;
    font-style: italic;
    color: white;
 }
 
 .home .content h1 span{
-  font-size: 1em;
+  font-size: 0.8em;
   font-weight: 600 ;
   font-style: italic;
 }
@@ -88,10 +88,10 @@ section{
   background: rgba(234, 238, 8, 0.712);
   padding:15px 35px;
   color: rgb(3, 10, 36);
-  font-size: 1.1em;
-  font-weight: 500;
+  font-size: 1em;
+  font-weight: 400;
   text-decoration: none;
-  border-radius: 2px;
+  border-radius: 25px;
 }
 
 .home .content a:hover{
@@ -110,7 +110,7 @@ section{
 
 .home .media-icons a{
   color: #0e0e7e;
-  font-size: 1.6em;
+  font-size: 1.5em;
   transition: 0.3s ease;
 }
 
