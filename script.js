@@ -104,3 +104,11 @@ $(document).ready(function () {
       } // End if
     });
   });
+  document.addEventListener('DOMContentLoaded', function() {
+    const circularProgressElements = document.querySelectorAll('.circular-progress');
+
+    circularProgressElements.forEach(element => {
+        const progress = element.getAttribute('data-progress');
+        element.style.setProperty('--progress', progress);
+    });
+});
