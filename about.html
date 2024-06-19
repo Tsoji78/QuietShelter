@@ -7,53 +7,33 @@
   <title>QuietShelter Foundation</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
   <link rel="stylesheet"  href="style.css">
+  
 </head>
 <body>
   <header>
-    <a href="#" class="Logo">
-    </a>
+    <a href="index.html" class="Logo"></a>
     <div class="menu-btn">
-      <div class="navigation">
-        <input type="checkbox" class="navigation__checkbox" id="nav-toggle">
-        <label for="nav-toggle" class="navigation__button">
-          <span class="navigation__icon" aria-label="toggle navigation menu"></span>
-        </label>
-        <div class="navigation__background"></div>
-  
-        <nav class="navigation__nav" role="navigation">
-          <ul class="navigation__list">
-            <li class="navigation__item">
-              <a href="index.html" class="navigation__link"><span>01</span>Home</a>
-            </li>
-            <li class="navigation__item">
-              <a href="strategy.html" class="navigation__link"><span>02</span>Strategy</a>
-            </li>
-            <li class="navigation__item">
-              <a href="about.html" class="navigation__link"><span>03</span>About</a>
-            </li>
-            <li class="navigation__item">
-              <a href="donation.html" class="navigation__link"><span>04</span>Donation</a>
-            </li>
-            <li class="navigation__item">
-              <a href="blog.html" class="navigation__link"><span>05</span>Blog</a>
-            </li>
-            <li class="navigation__item">
-              <a href="report.html" class="navigation__link"><span>06</span>Annual Report</a>
-            </li>
-      </ul>
-    </nav>
-   
-  </div>
-
-        </div> 
+      <nav class="navigation">
+        <ul class="navigation__list">
+          <li class="navigation__item"><a href="index.html" class="navigation__link">Home</a></li>
+          <li class="navigation__item"><a href="strategy.html" class="navigation__link">Strategy</a></li>
+          <li class="navigation__item"><a href="about.html" class="navigation__link">Our Story</a></li>
+          <li class="navigation__item"><a href="donation.html" class="navigation__link">Donation</a></li>
+          <li class="navigation__item"><a href="blog.html" class="navigation__link">Blog</a></li>
+          <li class="navigation__item"><a href="#" class="navigation__link">Annual Report</a></li>
+        </ul>
+      </nav>
+      <div class="hamburger" id="hamburger">
+        <div class="hamburger__icon"></div>
       </div>
+
     </div>
+    
   </header>
   
   <section class="showcase-area" id="showcase">
     <div class="showcase-container">
       <h1 class="main-title" id="home">Our Story</h1>
-      <p><strong>We are commited to sharing our experiences.</strong></p>
       <a href="#watch-our-story" class="btn btn-primary">Watch-Now</a>
     </div>
   </section>
@@ -71,7 +51,7 @@
         </p>
       </div>
       <div class="about-img">
-        <img src="images/ra.jpg" alt="food" />
+        <img src="images/cham.jpg" alt="about" />
       </div>
     </div>
   </section>
@@ -208,7 +188,7 @@
       </div>
       <div class="team-box">
         <div class="imgBox">
-            <img src="images/.jpg" alt="">
+            <img src="images/victoria.jpg" alt="">
         </div>
         <div class="team-content">
             <h2>Mrs Victoria Ezenduka</br>
@@ -217,7 +197,7 @@
       </div>
       <div class="team-box">
         <div class="imgBox">
-            <img src="images/.jpg" alt="">
+            <img src="images/ojo.jpg" alt="">
         </div>
         <div class="team-content">
             <h2>Mrs Esther Emmanuel</br>
@@ -226,6 +206,26 @@
       </div>
   </div>
 </section>
+
+<div class="counter-container">
+  <div class="circle">
+    
+    <span class="count">100</span>
+    <p>Projects</p>
+  </div>
+  <div class="circle">
+    <span class="count">100</span>
+    <p>Partners</p>
+  </div>
+  <div class="circle">
+    <span class="count">100</span>
+    <p>Volunteers</p>
+  </div>
+  <div class="circle">
+    <span class="count">100</span>
+    <p>Awards</p>
+  </div>
+</div>
 
 <div class="slider-area">
   <h2>Our Partners</h2>
@@ -282,9 +282,11 @@
     <p>No 2A,Gibson Jalo Crescent,beside Government House Dougirei,Yola North,Adamawa State.</p>
   </div>
 </footer>
+<script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+<script src="./script.js"></script>
 
 
-  </body>
+</body>
 
 </html>
   
