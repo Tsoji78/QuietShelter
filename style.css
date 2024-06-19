@@ -1788,22 +1788,58 @@ h2 {
   display: flex;
   justify-content: space-between;
   align-items: center;
-
 }
 
-.circle{
+.circle {
   background-color: #096ff5;
   color: white;
   padding: 60px;
   border-radius: 50%;
   margin: 20px 20px 40px 90px;
- 
 }
 
-.circle span{
+.circle span {
   font-size: 2.5em;
   font-weight: 500;
 }
-.circle p{
+
+.circle p {
   font-size: 18px;
+}
+
+/* Mobile responsive styles */
+@media (max-width: 768px) {
+  .counter-container {
+    flex-direction: row;
+    height: auto;
+    width: 100%;
+    align-items: center;
+  }
+
+  .circle {
+    padding: 40px;
+    margin: 20px 0;
+  }
+
+  .circle span {
+    font-size: 2em;
+  }
+
+  .circle p {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .circle {
+    padding: 30px;
+  }
+
+  .circle span {
+    font-size: 1.5em;
+  }
+
+  .circle p {
+    font-size: 14px;
+  }
 }
