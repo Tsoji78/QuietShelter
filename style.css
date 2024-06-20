@@ -890,10 +890,10 @@ h2 {
 /*Our-Team*/
 .team {
   text-align: center;
-  margin: 20px;
   background-color: #e2e4e9;
   padding: 1rem 0;
   font-size: 90px;
+  border-radius: 15px;
   
 }
 
@@ -1267,13 +1267,14 @@ h2 {
   font-size: 4.3rem;
 }
 
-#Volunteer h2 {
-  font-size: 2.3rem;
+#Volunteer h3 {
+  font-size: 2rem;
+  color: #202157;
 }
 
 #Volunteer p {
   font-size: 1.2rem;
-  color: #555;
+  color: #130222;
 }
 
 #Volunteer .small {
@@ -1665,7 +1666,7 @@ h2 {
   align-items: center;
   flex-direction: column;
   padding: 40px;
-  background-color: white;
+  background-color: #2890f152;
 }
 
 .blog-heading {
@@ -1690,7 +1691,7 @@ h2 {
 }
 
 .blog-box {
-  background-color: #2890f152;
+  background-color: white;
   border: 1px solid #f1ecec;
   margin: 20px;
   border-radius: 30px 10px 10px 10px;
