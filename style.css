@@ -1,9 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=FAMILY_NAME:wght@WEIGHT_OR_RANGE&display=swap');
+@import url('"https://fonts.googleapis.com/css?family=Tangerine');
 *{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'poppins', sans-serif;
+  font-family:  'Tangerine', serif;
   
   
 }
@@ -1782,7 +1782,24 @@ h2 {
 }
 
 /*counter*/
+#counter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 40px;
+  background-color: #2890f152;
+}
+.counter h1{
+  color: white;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 5.6rem; /* Adjusted to be responsive */
+  text-align: center;
+  flex-direction: column;
+  margin: 0 0 0 0;
 
+}
 .counter-container {
   height: 300px;
   width: 800px;
@@ -1811,7 +1828,7 @@ h2 {
 /* Mobile responsive styles */
 @media (max-width: 768px) {
   .counter-container {
-    flex-direction: row;
+    flex-direction: column;
     height: auto;
     width: 100%;
     align-items: center;
