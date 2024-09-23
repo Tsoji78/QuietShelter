@@ -1,0 +1,221 @@
+/* ......//about us//...... */
+
+#about {
+    padding: 50px 0;
+    background: #bacbf0;
+  }
+  
+  .about-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  #about h1 {
+    font-size: 4.3rem;
+  }
+  
+  #about h2 {
+    font-size: 2.3rem;
+  }
+  
+  #about p {
+    font-size: 1.2rem;
+    color: #555;
+  }
+  
+  #about .small {
+    font-size: 1.2rem;
+    color: #666;
+    font-weight: 600;
+  }
+  
+  .about-img {
+    flex: 1 1 400px;
+    padding: 30px;
+    transform: translateX(150%);
+    animation: about-img-animation 1s ease-in-out forwards;
+  }
+  
+  @keyframes about-img-animation {
+    100% {
+      transform: translate(0);
+    }
+  }
+  
+  .about-text {
+    flex: 1 1 400px;
+    padding: 30px;
+    margin: auto;
+    transform: translate(-150%);
+    animation: about-text-animation 1s ease-in-out forwards;
+  }
+  
+  @keyframes about-text-animation {
+    100% {
+      transform: translate(0);
+    }
+  }
+  
+  .about-img img {
+    display: block;
+    height: 400px;
+    max-width: 100%;
+    margin: auto;
+    object-fit: cover;
+    object-position: right;
+    border-radius: 90px 10px 10px 10px;
+  }
+  
+  /* our Vision styling**/
+  .mvv-container {
+    max-width: 90%;
+    margin: 20px auto 0;
+  }
+  
+  .mvv-container .mvv-block {
+    margin-bottom: 50px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  
+  .mvv-container .mvv-block .image {
+    flex: 0 0 auto;
+    width: 300px;
+    overflow: hidden;
+    border-radius: 5px;
+    box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.3);
+    line-height: 2;
+  }
+  
+  .mvv-container .mvv-block .image img {
+    width: 100%;
+    transition: .3s;
+    transform: scale(1);
+  
+  }
+  
+  .mvv-container .mvv-block .image:hover img {
+    transform: scale(1.05);
+  }
+  
+  .mvv-container .mvv-block .mvv-content {
+    flex: 0 0 auto;
+    width: calc(80% - 200px);
+    box-sizing: border-box;
+    align-self: center;
+  }
+  
+  .mvv-content {
+    text-align: center;
+    overscroll-behavior: scroll;
+  }
+  
+  .mvv-container .mvv-block .mvv-content h2 {
+    font-weight: 700;
+    font-size: 20px;
+    color: #55b0e4;
+    margin-bottom: 10px;
+  }
+  
+  .mvv-container .mvv-block .mvv-content p {
+    font-weight: 500;
+    font-size: 20px;
+  }
+  
+  @media screen and (min-width: 1024px) {
+    .mvv-container .mvv-block:nth-child(odd) .image {
+      order: 1;
+    }
+    .mvv-container .mvv-block:nth-child(even) .image {
+      order: 2;
+    }
+    .mvv-container .mvv-block:nth-child(even) .mvv-content {
+      order: 1;
+      padding-left: 30px;
+    }
+    .mvv-container .mvv-block:nth-child(odd) .mvv-content {
+      order: 2;
+      padding-left: 30px;
+    }
+  }
+  
+  @media screen and (max-width: 768px) {
+    .mvv-container .mvv-block {
+      flex-direction: column;
+      align-items: center;
+    }
+    .mvv-container .mvv-block .image {
+      width: 100%;
+      max-width: 300px;
+    }
+    .mvv-container .mvv-block .mvv-content {
+      width: 100%;
+      padding-left: 0;
+    }
+  }
+  
+  @media all and (max-width: 500px) {
+    .mvv-container .mvv-block {
+      flex-direction: column;
+      align-items: center;
+    }
+    .mvv-container .mvv-block .image {
+      width: 100%;
+      max-width: 300px;
+    }
+    .mvv-container .mvv-block .mvv-content {
+      width: 100%;
+      margin-left: 0;
+      text-align: left;
+    }
+  }
+  /* General Responsive Layout for Mobile Devices */
+@media only screen and (max-width: 768px) {
+  .about-wrapper {
+      flex-direction: column;
+      align-items: center;
+  }
+  .about-text, .about-img {
+      width: 100%;
+  }
+
+  .mvv-block {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+  }
+
+  .team-container .team-box {
+      flex: 1 1 100%; /* Each team box takes full width on mobile */
+      max-width: 100%;
+      margin: 1rem 0;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  /* Further reducing padding, font sizes for small screens */
+  h1, h2 {
+     font-size: 1.5rem;
+  }
+  
+  .mvv-content h2 {
+     font-size: 1.2rem;
+  }
+
+  .mvv-content p {
+     font-size: 1rem;
+  }
+
+  .btn {
+     font-size: 0.8rem;
+     padding: 0.4em 1.2em;
+  }
+
+  .showcase-container .main-title {
+     font-size: 2.5rem;
+  }
+
+  .team-container .team-box {
+     flex: 1 1 100%;
+  }
+}

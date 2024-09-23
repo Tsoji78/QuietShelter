@@ -1,0 +1,100 @@
+/*Thematic area section*/
+#area-menu {
+    background: #bacbf0;
+    border-radius: 5px;
+    padding: 2rem; /* Add padding for overall spacing */
+  }
+  
+  .area-menu-heading {
+    text-align: center;
+    font-size: 3rem; /* Adjust font size for responsiveness */
+    font-weight: 400;
+    color: #202020;
+    margin-bottom: 2rem;
+  }
+  
+  .area-menu-container {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 50px 0 30px 0;
+    justify-content: center; /* Center the items */
+  }
+  
+  .area-menu-container img {
+    display: block;
+    width: 270px;
+    height: 270px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Add transition for hover effect */
+  }
+  
+  .area-menu-container img:hover {
+    box-shadow: 0 0 15px black; 
+    transform: scale(1.1); /* Adjust scale for a more subtle effect */
+  }
+  
+  .area-menu-item {
+    display: flex;
+    flex: 1 1 calc(33.33% - 2rem); /* Ensure three items per row with spacing */
+    justify-content: center;
+    align-items: center;
+    margin: 1rem; /* Add margin for spacing */
+    padding: 2rem; /* Adjust padding for better spacing */
+    flex-direction: column;
+    text-align: center; /* Center text within items */
+  }
+  
+  .area-description {
+    margin-top: 1.5rem;
+  }
+  
+  .font-title {
+    font-size: 1.8rem;
+    font-weight: 400;
+    color: #444;
+  }
+  
+  .area-description p {
+    font-size: 1.1rem;
+    color: #555;
+    font-weight: 300;
+  }
+  
+  .area-description h3 {
+    color: #117964;
+    font-weight: 700;
+  }
+  
+  @media (max-width: 900px) {
+    .area-menu-item {
+      flex: 1 1 calc(50% - 2rem); /* Two items per row on medium screens */
+    }
+  }
+  
+  @media (max-width: 600px) {
+    .area-menu-heading {
+      font-size: 2.5rem; /* Adjust heading size for small screens */
+    }
+  
+    .area-menu-container img {
+      width: 200px;
+      height: 200px;
+    }
+  
+    .area-menu-item {
+      flex: 1 1 100%; /* One item per row on small screens */
+      margin-bottom: 1.5rem; /* Add bottom margin for spacing */
+    }
+  
+    .font-title {
+      font-size: 1.5rem; /* Adjust font size for small screens */
+    }
+  
+    .area-description p {
+      font-size: 1rem; /* Adjust paragraph font size for small screens */
+    }
+  }
+
+  

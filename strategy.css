@@ -1,0 +1,209 @@
+/*Strategy page styling*/
+
+.st-showcase-area {
+    height: 80vh;
+    background: url("images/chill.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  
+  .st-showcase-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    text-align: center; /* Center text horizontally */
+    padding: 0 15px; /* Add padding to ensure content is not too close to edges */
+    color: rgb(3, 19, 66);
+    font-size: 26px;
+  }
+  .st-showcase-container h1{
+    color: rgb(235, 235, 238);
+    font-size: 70px;
+  }
+  
+  .st-main-title {
+    text-transform: uppercase;
+    margin-top: 1em;
+    font-size: 3.6rem; /* Adjusted to be responsive */
+  
+  }
+  
+  .st-main-title p {
+    text-transform: uppercase;
+    margin-top: 1em;
+    font-size: 1.25rem; /* Adjusted to be responsive */
+  }
+  
+  .strategy {
+    padding: 100px 15px;
+    background: rgba(228, 235, 245, 0.575);
+    border-radius: 5px; 
+  }
+  
+  .strategy h2 {
+    margin-bottom: 5rem;
+  }
+  
+  @media (max-width: 900px) {
+    .st-main-title {
+      font-size: 2.5rem; /* Adjusted for medium screens */
+    }
+    
+    .st-main-title p {
+      font-size: 1.5rem; /* Adjusted for medium screens */
+    }
+  
+    .strategy {
+      padding: 50px 15px;
+    }
+  }
+  
+  @media (max-width: 600px) {
+    .st-main-title {
+      font-size: 2rem; /* Adjusted for small screens */
+    }
+  
+    .st-main-title p {
+      font-size: 1.2rem; /* Adjusted for small screens */
+    }
+  
+    .strategy {
+      padding: 30px 15px;
+      background: rgb(245, 242, 238);
+    }
+  }
+  
+  .timeline-items {
+    max-width: 1800px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    margin-bottom: 50px;
+    width: 80%;
+  }
+  .timeline-items::before {
+    content: "";
+    position: absolute;
+    width: 5px;
+    height: 100%;
+    background-color: rgb(94, 119, 187);
+    left: calc(50% - 2.5px);
+  }
+  .timeline-items:last-child {
+    margin-bottom: 0;
+  }
+  .timeline-items:nth-child(odd) {
+    padding-right: calc(50% + 30px);
+    text-align: center;
+  }
+  .timeline-items:nth-child(even) {
+    padding-left: calc(50% + 30px);
+  }
+  .timeline-dot {
+    height: 21px;
+    width: 21px;
+    background-color: rgb(51, 94, 134);
+    box-shadow: 0 0 25px rgb(35, 100, 240), 0 0 50px rgb(23, 135, 240);
+    position: absolute;
+    left: calc(50% - 10.5px);
+    border-radius: 50%;
+    top: 10px;
+  }
+  .timeline-contents {
+    background-color: rgb(17, 62, 107);
+    border: 2px solid rgb(32, 82, 218);
+    padding: 70px 50px;
+    border-radius: 4rem;
+    box-shadow: 0 0 10px rgb(0, 195, 255);
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  }
+  .timeline-contents:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px black;
+  }
+  .timeline-contents h3 {
+    font-size: 20px;
+    color: rgb(234, 239, 243);
+    margin: 0 0 10px;
+    font-weight: 500;
+  }
+  .timeline-contents p {
+    color: rgb(234, 235, 236);
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 22px;
+  }
+  ::-webkit-scrollbar {
+    width: 15px;
+  }
+  ::-webkit-scrollbar-thumb {
+    background-color: black;
+  }
+  ::-webkit-scrollbar-track {
+    background-color: gray;
+  }
+  
+  @media (max-width: 900px) {
+    .timeline-items {
+      width: calc(50% - 2rem);
+      margin-bottom: 40px;
+    }
+    .timeline-items::before {
+      left: calc(50% - 2.5px);
+    }
+    .timeline-items:nth-child(odd),
+    .timeline-items:nth-child(even) {
+      padding-right: 0;
+      padding-left: 0;
+      text-align: left;
+    }
+    .timeline-items:nth-child(odd) {
+      text-align: left;
+    }
+    .timeline-items:nth-child(even) {
+      text-align: left;
+    }
+  }
+  
+  @media (max-width: 600px) {
+    .timeline-items {
+      width: 100%;
+      margin-bottom: 30px;
+    }
+    .timeline-items::before {
+      left: calc(50% - 2.5px);
+    }
+    .timeline-items:nth-child(odd),
+    .timeline-items:nth-child(even) {
+      padding-right: 0;
+      padding-left: 0;
+      text-align: left;
+    }
+  }
+  
+  @media (max-width: 300px) {
+    .st-main-title {
+      text-transform: uppercase;
+      margin-top: 1em;
+      font-size: 2rem; /* Adjusted font size */
+    }
+    .st-showcase-container p {
+      margin-top: 1em;
+      font-size: 1.5rem; /* Adjusted font size */
+      color: white;
+    }
+    .strategy h2 {
+      margin-bottom: 2rem;
+    }
+    .timeline-items {
+      max-width: 100%;
+      margin: auto;
+      margin-bottom: 20px;
+      width: 100%;
+    }
+  }

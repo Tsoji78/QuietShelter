@@ -1,0 +1,156 @@
+/*Thematic areas css*/
+.update-area {
+    height: 80vh;
+    background: url("images/falls.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  
+  .update-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    text-align: center; /* Center text horizontally */
+    padding: 0 15px; /* Add padding to ensure content is not too close to edges */
+    color: white;
+    font-size: 26px;
+  }
+  .update-container h1{
+    color: white;
+    font-size: 55px;
+  }
+  
+  .update-title {
+    text-transform: uppercase;
+    margin-top: 1em;
+    font-size: 3.6rem; /* Adjusted to be responsive */
+  
+  }
+  
+  .update-title p {
+    text-transform: uppercase;
+    margin-top: 1em;
+    font-size: 1.25rem; /* Adjusted to be responsive */
+  }
+.subject-matter{
+    font-size: 50px;
+    
+  }
+  
+  /* Container for the content */
+  .intro, .post-info, .post-content, .outro {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Intro Section */
+  .intro h2 {
+    color: #2f4a64;
+    font-size: 46px;
+    margin-bottom: 10px;
+  }
+  
+  .intro p {
+    font-size: 16px;
+    color: #555;
+    line-height: 1.7;
+  }
+  
+  /* Post Info Section */
+  .post-info h1 {
+    font-size: 40px;
+    color: #b49406;
+    text-align: center;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #061b57;
+    padding-bottom: 10px;
+  }
+  
+  /* Post Content Section */
+  .post-content {
+    padding: 20px;
+  }
+  .post-image img, p{
+    width: 50%;
+    min-height: 10%;
+    margin-left: 30%;
+    
+  }
+  
+  .post-content .header-one {
+    font-size: 32px;
+    color: #2980b9;
+    margin-top: 20px;
+    border-left: 4px solid #79681d;
+    padding-left: 10px;
+  }
+  
+  
+  .post-content ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .post-content ul li {
+    background-color: #ecf0f1;
+    padding: 10px;
+    margin: 5px 0;
+    border-left: 4px solid #d3c338;
+  }
+  
+  .post-content ul li strong {
+    color: #2c3e50;
+  }
+  
+  .post-content ul li:hover {
+    background-color: #dff0d8;
+  }
+  
+  /* Outro Section */
+  .outro p {
+    font-size: 16px;
+    color: #777;
+    line-height: 1.7;
+    padding: 15px;
+    background-color: #eaeaea;
+    border-left: 4px solid #3498db;
+    margin: 10px 0;
+    border-radius: 5px;
+  }
+  
+  /* Links */
+  a {
+    color: #eaee13;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Media Queries for Responsive Design */
+  @media (max-width: 768px) {
+    .intro, .post-info, .post-content, .outro {
+      padding: 10px;
+      margin: 10px;
+    }
+  
+    .post-info h1 {
+      font-size: 34px;
+    }
+  
+    .post-content .header-one {
+      font-size: 28px;
+    }
+  
+    .intro h2 {
+      font-size: 40px;
+    }
+  }

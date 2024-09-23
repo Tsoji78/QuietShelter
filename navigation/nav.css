@@ -1,0 +1,122 @@
+.navigation {
+    display: flex;
+  }
+  
+  .navigation__list {
+    display: flex;
+    list-style: none;
+  }
+  
+  .navigation__item {
+    margin-left: 20px;
+  }
+  
+  .navigation__link{
+    color: var(--primary-color);
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s ease;
+  }
+  
+  .navigation__link:hover {
+    color: var(--button-hover-bg);
+  }
+  .navigation__link.active {
+    color: #e5e91a; /* Example active text color */
+  }
+  
+  
+  /* Hamburger styles */
+  .hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 30px;
+    height: 21px;
+    cursor: pointer;
+    z-index: 1001;
+  }
+  
+  .hamburger__icon {
+    width: 100%;
+    height: 3px;
+    background-color: var(--hamburger-color);
+    transition: all 0.3s ease;
+  }
+  
+  .hamburger__icon::before,
+  .hamburger__icon::after {
+    content: '';
+    width: 100%;
+    height: 3px;
+    background-color: var(--hamburger-color);
+    position: absolute;
+    transition: all 0.3s ease;
+  }
+  
+  .hamburger__icon::before {
+    transform: translateY(-8px);
+  }
+  
+  .hamburger__icon::after {
+    transform: translateY(8px);
+  }
+  
+  .hamburger.active .hamburger__icon {
+    background-color: transparent;
+  }
+  
+  .hamburger.active .hamburger__icon::before {
+    transform: rotate(45deg);
+  }
+  
+  .hamburger.active .hamburger__icon::after {
+    transform: rotate(-45deg);
+  }
+  
+  /* Responsive styles */
+  @media (max-width: 768px) {
+    header {
+      padding: 15px var(--padding-small);
+    }
+  
+    .navigation {
+      position: fixed;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100vh;
+      background-color: var(--header-bg);
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      transition: all 0.3s ease;
+    }
+  
+    .navigation__list {
+      flex-direction: column;
+    }
+  
+    .navigation__item {
+      margin: 15px 0;
+    }
+  
+    .hamburger {
+      display: flex;
+    }
+  
+    .navigation.active {
+      left: 0;
+    }
+  }
+  
+  @media (max-width: 320px) {
+    header {
+      padding: 10px 15px;
+    }
+  
+    .navigation__link {
+      font-size: 16px;
+    }
+  }
+  

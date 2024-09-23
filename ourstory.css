@@ -1,0 +1,49 @@
+/**Our story page css*/
+.btn {
+    display: inline-block;
+    padding: 0.5em 1.5em;
+    text-decoration: none;
+    border-radius: 50px;
+    cursor: pointer;
+    outline: none;
+    margin-top: 1em;
+    text-transform: uppercase;
+    font-weight: small;
+  }
+  
+  .btn-primary {
+    color: #fff;
+    background: #096ff5;
+  }
+  
+  .btn-primary:hover {
+    background: #112979;
+    transition:  0.3s ease-in-out;
+  }
+  
+  .showcase-area {
+    height: 80vh;
+    background: 
+      url("images/fen.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  .showcase-container .main-title{
+    color: rgb(229, 230, 236);
+    font-size: 75px;
+    font-weight: 700;
+  }
+  .showcase-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 1.3rem;
+    
+  }
+  
+  .main-title {
+    text-transform: uppercase;
+    margin-top: 1.5em;
+    color: white;
+  }

@@ -1,0 +1,166 @@
+/*Our-Team*/
+.team {
+    text-align: center;
+    background-color: #e2e4e9;
+    padding: 1rem 0;
+    font-size: 90px;
+    border-radius: 15px;
+    
+  }
+  
+  .team-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .team-container .team-box {
+    flex: 1 1 calc(30.33% - 2rem); /* Ensures three boxes per row with spacing */
+    max-width: calc(30.33% - 2rem);
+    margin: 1rem;
+    box-sizing: border-box; /* Ensures padding and border are included in the width and height */
+    position: relative;
+    height: 25rem;
+    transition: transform 0.5s ease-in-out;
+  }
+  
+  .team-container .team-box:hover .imgBox {
+    transform: translate(-3.5rem, -3.5rem);
+  }
+  
+  .team-container .team-box:hover .team-content {
+    transform: translate(3.5rem, 3.5rem);
+  }
+  
+  .imgBox {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    transition: all 0.5s ease-in-out;
+   
+  }
+  
+  .imgBox img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 40px;
+   
+  }
+  
+  .team-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 1.5rem;
+    display: flex;
+    justify-content: center;
+    background-color: #fff;
+    z-index: 1;
+    align-items: flex-end;
+    text-align: center;
+    transition: 0.5s ease-in-out;
+    border-radius: 40px;
+  }
+  
+  .team-content h2 {
+    display: block;
+    font-size: 2rem;
+    color: #111;
+    font-weight: 500;
+    line-height: 2rem;
+    letter-spacing: 1px;
+  }
+  
+  .team-content span {
+    color: #555;
+    font-size: 1.4rem;
+    font-weight: 300;
+    letter-spacing: 2px;
+  }
+  
+  @media (max-width: 900px) {
+    .team-container .team-box {
+      flex: 1 1 calc(50% - 2rem); /* Two boxes per row on medium screens */
+      max-width: calc(50% - 2rem);
+    }
+    .team {
+      text-align: center;
+      margin: 20px;
+      background-color: #e2e4e9;
+      padding: 1rem 0;
+      font-size: 40px;
+      
+    }
+  }
+  
+  @media (max-width: 600px) {
+    .team-container .team-box {
+      flex: 1 1 100%; /* One box per row on small screens */
+      max-width: 100%;
+    }
+    .team-container .team-box:hover .team-content {
+      transform: translate(0, 3.5rem);
+    }
+    .team-container .team-box:hover .imgBox {
+      transform: translate(0, -3.5rem);
+    }
+  }
+  
+  /* Additional Media Query 
+  
+  /*Our Partners*/
+  .slider-area h2 {
+    text-align: center;
+    font-family: Impact, sans-serif; /* Adding a fallback font */
+    font-size: 40px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin: 100px 0 30px 0;
+    color: #fff;
+  }
+  
+  .partners-wrapper {
+    width: 450px;
+    margin: 0 auto;
+    display: flex;
+    overflow: hidden;
+    border-radius: 180px;
+    padding: 2.5rem;
+    background: #f0ecec;
+    box-shadow: rgba(0, 0, 0, 0.35) 0 5px 15px;
+  }
+  
+  .partners-item {
+    animation: animate 25s alternate linear infinite;
+  }
+  
+  .partners-wrapper:hover .partners-item {
+    animation-play-state: paused !important;
+  }
+  
+  @keyframes animate {
+    0% {
+      transform: translate3d(0, 0, 0);
+    }
+    100% {
+      transform: translate3d(-1100px, 0, 0);
+    }
+  }
+  
+  @media (max-width: 767px) {
+    .slider-area h2 {
+      font-size: 32px; /* Adjusting font size for smaller screens */
+    }
+    .partners-wrapper {
+      width: 65%;
+      border-radius: 70px; /* Fixing border-radius value */
+      padding: 1rem; /* Adjusting padding for smaller screens */
+    }
+  }

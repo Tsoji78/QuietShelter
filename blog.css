@@ -1,0 +1,157 @@
+/*blog*/
+.update-area {
+    height: 80vh;
+    background: url("images/falls.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  
+  .update-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    text-align: center; /* Center text horizontally */
+    padding: 0 15px; /* Add padding to ensure content is not too close to edges */
+    color: white;
+    font-size: 26px;
+  }
+  .update-container h1{
+    color: white;
+    font-size: 55px;
+  }
+  
+  .update-title {
+    text-transform: uppercase;
+    margin-top: 1em;
+    font-size: 3.6rem; /* Adjusted to be responsive */
+  
+  }
+  
+  .update-title p {
+    text-transform: uppercase;
+    margin-top: 1em;
+    font-size: 1.25rem; /* Adjusted to be responsive */
+  }
+  #blog {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 40px;
+    background-color: #2890f152;
+  }
+  
+  .blog-heading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  
+  .blog-heading span {
+    color: rgb(79, 71, 153);
+    font-size: 50px;
+    font-weight: 700;
+  }
+  
+  .blog-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin: 20px 0px;
+    width: 100%;
+  }
+  
+  .blog-box {
+    background-color: white;
+    border: 1px solid #f1ecec;
+    margin: 20px;
+    border-radius: 30px 10px 10px 10px;
+  }
+  
+  .blog-img {
+    width: 100%;
+    height: 300px;
+    padding: 10px;
+  }
+  
+  .blog-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 10px;
+  }
+  
+  .blog-text {
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    margin: -20px;
+  }
+  
+  .blog-text span {
+    color: #0b1bff;
+    font-size: 0.9rem;
+  }
+  
+  .blog-text .blog-title {
+    font-size: 1.3rem;
+    font-weight: 500;
+    color: #b80f42;
+  }
+  
+  .blog-text .blog-title:hover {
+    color: #112979;
+    transition: all ease 0.5s;
+  }
+  
+  .blog-text p {
+    color: #0b2e79;
+    font-size: 0.9rem;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin: 20px 0px;
+  }
+  
+  .blog-text a {
+    color: #e60840;
+  }
+  .blog-text a:hover {
+    color: #2908e6;
+  }
+  @media (max-width: 1250px) {
+    .blog-container {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .blog-container {
+      grid-template-columns: 1fr;
+    }
+  
+    .blog-text {
+      padding: 20px;
+    }
+  }
+  
+  @media (max-width: 550px) {
+    .blog-box {
+      margin: 20px 10px;
+    }
+  
+    .blog-img {
+      height: 200px;
+    }
+  
+    .blog-text span {
+      font-size: 0.8rem;
+    }
+  }
