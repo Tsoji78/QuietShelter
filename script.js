@@ -1,3 +1,17 @@
+//active nav
+const navItems = document.querySelectorAll('.navigation-item');
+
+// Add click event listener to each nav item
+navItems.forEach(item => {
+  item.addEventListener('click', function() {
+    // Remove active class from all nav items
+    navItems.forEach(item => item.classList.remove('active'));
+
+    // Add active class to the clicked nav item
+    this.classList.add('active');
+  });
+});
+
 document.addEventListener("DOMContentLoaded", function() {
   const menuBtn = document.querySelector(".menu-btn");
   const navigation = document.querySelector(".navigation");
