@@ -5,6 +5,9 @@
   box-sizing: border-box;
   font-family:  'Tangerine', serif;
   
+ 
+ 
+  
   
 }
 
@@ -104,7 +107,7 @@ section {
 }
 
 .home .content.active {
-  display: block;
+  display:block;
 }
 
 .home .content h1 {
