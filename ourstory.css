@@ -77,7 +77,7 @@
   }
 
   .showcase-container .main-title {
-    font-size: 2rem; /* Font size adjusted for smaller devices */
+    font-size: 4rem; /* Font size adjusted for smaller devices */
     margin-top: 1rem;
   }
 
@@ -94,11 +94,11 @@
 /* Very Small Screens */
 @media screen and (max-width: 400px) {
   .showcase-container .main-title {
-    font-size: 1.5rem; /* Further reduced for very small screens */
+    font-size: 3.5rem; /* Further reduced for very small screens */
   }
 
   .btn {
-    font-size: 0.7rem;
+    font-size: 0.9rem;
     padding: 0.3em 1rem; /* Further reduced button padding */
   }
 }

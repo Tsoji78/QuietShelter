@@ -7,202 +7,202 @@ body, html {
 
 /* Blog Section */
 .update-area {
-height: 80vh;
-background: url("images/falls.jpg");
-background-size: cover;
-background-position: center;
-background-repeat: no-repeat;
+  height: 80vh;
+  background: url("images/tower.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .update-container {
-display: flex;
-flex-direction: column;
-align-items: center;
-justify-content: center;
-height: 100%;
-text-align: center;
-padding: 0 15px;
-color: white;
-font-size: 1.6rem; /* Use rem for scalability */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  text-align: center;
+  padding: 0 5%; /* Adjusted padding for responsiveness */
+  color: white;
+  font-size: 1.6rem; /* Using rem for scalability */
 }
 
 .update-container h1 {
-color: white;
-font-size: 3.4rem; /* Responsive font size */
+  color: white;
+  font-size: 3.4rem; /* Responsive font size */
 }
 
 .update-title {
-text-transform: uppercase;
-margin-top: 1em;
-font-size: 2.5rem; /* Responsive font size */
+  text-transform: uppercase;
+  margin-top: 1em;
+  font-size: 2.5rem; /* Responsive font size */
 }
 
 .update-title p {
-text-transform: uppercase;
-margin-top: 1em;
-font-size: 1.25rem;
+  text-transform: uppercase;
+  margin-top: 1em;
+  font-size: 1.25rem;
 }
 
 #blog {
-display: flex;
-justify-content: center;
-align-items: center;
-flex-direction: column;
-padding: 40px 5%; /* Responsive padding */
-background-color: #2890f152;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 2.5rem 5%; /* Adjusted padding for responsiveness */
+  background-color: rgba(40, 144, 241, 0.32);  /* More descriptive background color */
 }
 
 .blog-heading {
-display: flex;
-justify-content: center;
-align-items: center;
-flex-direction: column;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 .blog-heading span {
-color: rgb(79, 71, 153);
-font-size: 3rem; /* Reduced size for responsiveness */
-font-weight: 700;
+  color: rgb(255, 255, 255);
+  font-size: 3rem; /* Reduced size for responsiveness */
+  font-weight: 700;
 }
 
 .blog-container {
-display: grid;
-grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Dynamic columns based on available space */
-gap: 20px;
-margin: 20px 0;
-width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(18.75rem, 1fr)); /* Adjusted to rem */
+  gap: 1.25rem; /* Adjusted to rem */
+  margin: 1.25rem 0;
+  width: 40%;
 }
 
 .blog-box {
-background-color: white;
-border: 1px solid #f1ecec;
-margin: 20px;
-border-radius: 30px 10px 10px 10px;
-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Added shadow for a modern look */
+  background-color: rgb(252, 251, 248);
+  border: 1px solid #f1ecec;
+  margin: 1.25rem;
+  border-radius: 1.875rem 0.625rem 0.625rem 0.625rem; /* Converted px to rem */
+  box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1); /* Added shadow for a modern look */
 }
 
 .blog-img {
-width: 100%;
-height: 300px;
-padding: 10px;
+  width: 100%;
+  height: 18.75rem; /* Converted to rem */
+  padding: 0.625rem;
 }
 
 .blog-img img {
-width: 100%;
-height: 100%;
-object-fit: cover;
-object-position: center;
-border-radius: 10px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 0.625rem; /* Converted px to rem */
 }
 
 .blog-text {
-padding: 30px;
-display: flex;
-flex-direction: column;
-margin: -20px;
+  padding: 1.875rem; /* Adjusted to rem */
+  display: flex;
+  flex-direction: column;
+  margin: -1.25rem;
 }
 
 .blog-text span {
-color: #0b1bff;
-font-size: 0.9rem;
+  color: #0b1bff;
+  font-size: 0.9rem;
 }
 
 .blog-text .blog-title {
-font-size: 1.3rem;
-font-weight: 500;
-color: #b80f42;
-transition: color 0.3s ease;
+  font-size: 1.3rem;
+  font-weight: 500;
+  color: #1a0fb8;
+  transition: color 0.3s ease;
 }
 
 .blog-text .blog-title:hover {
-color: #112979;
+  color: #dbc710;
 }
 
 .blog-text p {
-color: #0b2e79;
-font-size: 0.9rem;
-display: -webkit-box;
--webkit-line-clamp: 3;
--webkit-box-orient: vertical;
-overflow: hidden;
-text-overflow: ellipsis;
-margin: 20px 0;
+  color: #0b2e79;
+  font-size: 0.9rem;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin: 1.25rem 0; /* Adjusted to rem */
 }
 
 .blog-text a {
-color: #e60840;
+  color: #4308e6;
 }
 
 .blog-text a:hover {
-color: #2908e6;
+  color: #e6d008;
 }
 
 /* Media Queries for Responsiveness */
 
 /* For large screens and tablets */
 @media (max-width: 1250px) {
-.blog-container {
-  grid-template-columns: repeat(2, 1fr); /* 2 columns for medium screens */
-}
+  .blog-container {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns for medium screens */
+  }
 
-.update-container h1 {
-  font-size: 3rem;
-}
+  .update-container h1 {
+    font-size: 3rem;
+  }
 
-.update-container {
-  font-size: 1.4rem;
-}
+  .update-container {
+    font-size: 1.4rem;
+  }
 }
 
 /* For tablets and medium devices */
 @media (max-width: 768px) {
-.blog-container {
-  grid-template-columns: 1fr; /* One column for smaller screens */
-}
+  .blog-container {
+    grid-template-columns: 1fr; /* One column for smaller screens */
+  }
 
-.blog-text {
-  padding: 20px; /* Adjust padding for smaller screens */
-}
+  .blog-text {
+    padding: 1.25rem; /* Adjust padding for smaller screens */
+  }
 
-.update-container h1 {
-  font-size: 2.8rem;
-}
+  .update-container h1 {
+    font-size: 2.8rem;
+  }
 
-.update-container {
-  font-size: 1.2rem;
-}
+  .update-container {
+    font-size: 1.2rem;
+  }
 }
 
 /* For mobile devices */
 @media (max-width: 550px) {
-.blog-box {
-  margin: 20px 10px;
-}
+  .blog-box {
+    margin: 1.25rem 0.625rem; /* Adjusted to rem */
+  }
 
-.blog-img {
-  height: 200px;
-}
+  .blog-img {
+    height: 12.5rem; /* Converted to rem */
+  }
 
-.blog-text span {
-  font-size: 0.8rem;
-}
+  .blog-text span {
+    font-size: 0.8rem;
+  }
 
-.update-container h1 {
-  font-size: 2.4rem;
-}
+  .update-container h1 {
+    font-size: 2.4rem;
+  }
 
-.update-container {
-  font-size: 1rem;
-}
+  .update-container {
+    font-size: 1rem;
+  }
 }
 
 /* Smaller Mobile Screens (max-width: 400px) */
 @media (max-width: 400px) {
-.update-container h1 {
-  font-size: 2rem;
-}
+  .update-container h1 {
+    font-size: 2rem;
+  }
 
-.update-container {
-  font-size: 0.9rem;
-}
+  .update-container {
+    font-size: 0.9rem;
+  }
 }

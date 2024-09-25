@@ -1,0 +1,112 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+  }
+  
+  /* Thematic Area */
+  .sgbv-area {
+    height: 80vh;
+    background: url("images/GBV.png") no-repeat center/cover;
+  }
+  
+  .sgbv-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    color: white;
+    text-align: center;
+  }
+  
+  .sgbv-container h1 {
+    font-size: 3.5rem;
+    padding: 2%;
+  }
+  
+  .intro, .post-info, .post-content {
+    max-width: 90%;
+    margin: 2% auto;
+    padding: 2%;
+    background-color: white;
+    border-radius: 0.5rem;
+    box-shadow: 0 0.25rem 0.625rem rgba(0, 0, 0, 0.1);
+  }
+  
+  .intro h2 {
+    color: #2f4a64;
+    font-size: 2.75rem;
+    margin-bottom: 1rem;
+  }
+  
+  .intro p {
+    font-size: 1.125rem;
+    color: #555;
+    line-height: 1.7;
+  }
+  .post-image img {
+    width: 50%;
+    position: relative;
+    margin-left: 20%;/* Adjusted for smaller screens */
+  }
+  
+  .post-info h1 {
+    font-size: 2.5rem;
+    color: #b49406;
+    text-align: center;
+    margin-bottom: 2%;
+    border-bottom: 0.125rem solid #061b57;
+    padding-bottom: 1rem;
+  }
+  
+  .post-content h3 {
+    font-size: 2rem;
+    color: #2980b9;
+    margin-top: 2%;
+    border-left: 0.25rem solid #79681d;
+    padding-left: 1rem;
+  }
+  
+  .post-content ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .post-content ul li {
+    background-color: #ecf0f1;
+    padding: 1%;
+    margin: 1% 0;
+    border-left: 0.25rem solid #d3c338;
+  }
+  
+  .navigation-buttons {
+    display: flex;
+    justify-content: space-between;
+    max-width: 600px;
+    margin: 2rem auto;
+  }
+  
+  .button {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    font-size: 1.25rem;
+    color: white;
+    background-color: #3498db;
+    text-decoration: none;
+    border-radius: 0.5rem;
+  }
+  
+  .button:hover {
+    background-color: #2980b9;
+  }
+  
+  .prev {
+    background-color: #e4e12f;
+  }
+  
+  .prev:hover {
+    background-color
+  

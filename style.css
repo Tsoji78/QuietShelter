@@ -111,12 +111,12 @@ section {
 }
 
 .home .content h1 {
-  font-size: 4.5em;
+  font-size: 2.5em;
   font-weight: 400;
   text-transform: uppercase;
-  letter-spacing: 1px;
-  line-height: 65px;
-  margin-bottom: 30px;
+  letter-spacing: 0.4%;
+  line-height: 120%;
+  margin-bottom: 7%;
   font-style: italic;
   color: white;
 }
@@ -133,7 +133,7 @@ section {
 
 .home .content a {
   background: var(--button-bg);
-  padding: 15px 35px;
+  padding: 1rem;  
   color: rgb(3, 10, 36);
   font-size: 1em;
   font-weight: 400;

@@ -23,7 +23,7 @@ body, html {
   height: 100%;
   text-align: center; /* Center text horizontally */
   padding: 0 5%; /* Adjusted padding for better responsiveness */
-  color: rgb(3, 19, 66);
+  color: rgb(228, 214, 16);
   font-size: 1.625rem; /* Equivalent to 26px */
 }
 
@@ -97,9 +97,9 @@ body, html {
 .timeline-items::before {
   content: "";
   position: absolute;
-  width: 0.3125rem; /* Equivalent to 5px */
+  width: 0rem; /* Equivalent to 5px */
   height: 100%;
-  background-color: rgb(94, 119, 187);
+  background-color: rgb(132, 148, 192);
   left: calc(50% - 2.5px);
 }
 
