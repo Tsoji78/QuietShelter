@@ -1,214 +1,140 @@
 /* General Styles */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+/* Thematic Area */
+.wash-area {
+  height: 80vh;
+  background: url("images/wash2.png") no-repeat center/cover;
+}
+
+.wash-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  padding: 0 5%;
+  color: rgb(39, 36, 36);
+  font-size: 1.625rem;
+  text-align: center;
+}
+
+.wash-container h1 {
+  font-size: 3.4375rem;
+}
+
+.intro, .post-info, .post-content {
+  max-width: 90%;
+  margin: 2% auto;
+  padding: 2%;
+  background-color: white;
+  border-radius: 0.5rem;
+  box-shadow: 0 0.25rem 0.625rem rgba(0, 0, 0, 0.1);
+}
+
+.intro h2 {
+  color: #2f4a64;
+  font-size: 2.875rem;
+  margin-bottom: 1rem;
+}
+
+.intro p {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.7;
+}
+.post-image img {
+  width: 50%;
+  position: relative;
+  margin-left: 20%;/* Adjusted for smaller screens */
+}
+
+.post-info h1 {
+  font-size: 2.5rem;
+  color: #b49406;
+  text-align: center;
+  margin-bottom: 2%;
+  border-bottom: 0.125rem solid #061b57;
+  padding-bottom: 1rem;
+}
+
+.post-content h3.header-one {
+  font-size: 2rem;
+  color: #2980b9;
+  margin-top: 2%;
+  border-left: 0.25rem solid #79681d;
+  padding-left: 1rem;
+}
+
+.post-content ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.post-content ul li {
+  background-color: #ecf0f1;
+  padding: 1%;
+  margin: 1% 0;
+  border-left: 0.25rem solid #d3c338;
+}
+
+.navigation-buttons {
+  display: flex;
+  justify-content: space-between;
+  max-width: 600px;
+  margin: 2rem auto;
+}
+
+.button {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  font-size: 1.25rem;
+  color: white;
+  background-color: #3498db;
+  text-decoration: none;
+  border-radius: 0.5rem;
+}
+
+.button:hover {
+  background-color: #2980b9;
+}
+
+.prev {
+  background-color: #e4e12f;
+}
+
+.prev:hover {
+  background-color: #d3c338;
+}
+
+.next {
+  background-color: #070be0;
+}
+
+.next:hover {
+  background-color: #061b57;
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+  .intro, .post-info, .post-content {
+    padding: 5%;
+    margin: 5%;
   }
-  
-  /* Thematic Area */
-  .wash-area {
-    height: 80vh;
-    background: url("images/wash2.png") no-repeat center/cover;
-  }
-  
-  .wash-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100%;
-    padding: 0 5%; /* Percentage padding for fluid design */
-    color: white;
-    font-size: 1.625rem; /* 26px equivalent, scalable */
-    text-align: center;
-  }
-  
-  .wash-container h1 {
-    font-size: 3.4375rem; /* Scalable to 55px */
-  }
-  
-  .wash-title {
-    text-transform: uppercase;
-    margin-top: 1rem;
-    font-size: 2.25rem; /* Scalable heading */
-  }
-  
-  .wash-title p {
-    text-transform: uppercase;
-    margin-top: 1rem;
-    font-size: 1.25rem; /* Scalable paragraph */
-  }
-  
-  .subject-matter {
-    font-size: 3.125rem; /* Scalable to 50px */
-  }
-  
-  /* Container for the content */
-  .intro, .post-info, .post-content, .outro {
-    max-width: 90%; /* Use percentage for responsiveness */
-    margin: 2% auto; /* Margin is responsive */
-    padding: 2%;
-    background-color: white;
-    border-radius: 0.5rem;
-    box-shadow: 0 0.25rem 0.625rem rgba(0, 0, 0, 0.1);
-  }
-  
-  /* Intro Section */
+
   .intro h2 {
-    color: #2f4a64;
-    font-size: 2.875rem; /* Scalable to 46px */
-    margin-bottom: 1rem;
+    font-size: 2.5rem;
   }
-  
-  .intro p {
-    font-size: 1rem; /* Scalable text */
-    color: #555;
-    line-height: 1.7;
-  }
-  
-  /* Post Info Section */
+
   .post-info h1 {
-    font-size: 2.5rem; /* Scalable to 40px */
-    color: #b49406;
-    text-align: center;
-    margin-bottom: 2%;
-    border-bottom: 0.125rem solid #061b57;
-    padding-bottom: 1rem;
+    font-size: 2.125rem;
   }
-  
-  /* Post Content Section */
-  .post-content {
-    padding: 2%;
-  }
-  
-  .post-image img, p {
-    width: 50%;
-    margin: 0 auto;
-    display: block;
-    min-height: 10%;
-  }
-  
-  .post-content .header-one {
-    font-size: 2rem; /* Scalable heading */
-    color: #2980b9;
-    margin-top: 2%;
-    border-left: 0.25rem solid #79681d;
-    padding-left: 1rem;
-  }
-  
-  /* List Styling */
-  .post-content ul {
-    list-style-type: none;
-    padding: 0;
-  }
-  
-  .post-content ul li {
-    background-color: #ecf0f1;
-    padding: 1%;
-    margin: 1% 0;
-    border-left: 0.25rem solid #d3c338;
-    transition: background-color 0.3s ease;
-  }
-  
-  .post-content ul li strong {
-    color: #2c3e50;
-  }
-  
-  .post-content ul li:hover {
-    background-color: #dff0d8;
-  }
-  
-  /* Outro Section */
-  .outro p {
-    font-size: 1rem;
-    color: #777;
-    line-height: 1.7;
-    padding: 1.5%;
-    background-color: #eaeaea;
-    border-left: 0.25rem solid #3498db;
-    margin: 1% 0;
-    border-radius: 0.25rem;
-  }
-  
-  /* Links */
-  a {
-    color: #eaee13;
-    text-decoration: none;
-  }
-  
-  a:hover {
-    text-decoration: underline;
-  }
-  
-  /* Media Queries for Responsive Design */
-  @media (max-width: 768px) {
-    .intro, .post-info, .post-content, .outro {
-      padding: 5%;
-      margin: 5%;
-    }
-  
-    .post-info h1 {
-      font-size: 2.125rem; /* 34px scalable */
-    }
-  
-    .post-content .header-one {
-      font-size: 1.75rem; /* 28px scalable */
-    }
-  
-    .intro h2 {
-      font-size: 2.5rem; /* 40px scalable */
-    }
-    .intro p {
-      font-size: 1rem; /* Scalable text */
-      color: #555;
-      line-height: 1.7;
-      width: 90%;
-      
-    }
-  
-    .post-image img {
-      width: 80%; /* Adjusted for smaller screens */
-    }
-  }
-  /* Nextthematic Section */
-  .navigation-buttons {
-    display: flex;
-    justify-content: space-between;
-    max-width: 600px;
-    margin: 2rem auto;
-  }
-  
-  .button {
-    display: inline-block;
-    padding: 0.75rem 1.5rem;
-    font-size: 1.25rem;
-    color: white;
-    background-color: #3498db;
-    text-decoration: none;
-    border-radius: 0.5rem;
-    transition: background-color 0.3s ease;
-    text-align: center;
-  }
-  
-  .button:hover {
-    background-color: #2980b9;
-  }
-  
-  .prev {
-    background-color: #e4e12f; /* Red for previous button */
-  }
-  
-  .prev:hover {
-    background-color: #e4e12f;
-  }
-  
-  .next {
-    background-color: #070be0; /* Green for next button */
-  }
-  
-  .next:hover {
-    background-color: #070be0;
-  }
-  
-  
+
+  .post-content h3.header-one {
+    font-size: 1.75rem;
+ 
