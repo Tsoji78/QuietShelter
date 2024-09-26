@@ -1,0 +1,37 @@
+---
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home/quietshe/public_html/
+    - /bin/cp index.html $DEPLOYPATH
+    - /bin/cp style.css $DEPLOYPATH
+    - /bin/cp about.html $DEPLOYPATH
+    - /bin/cp about.css $DEPLOYPATH
+    - /bin/cp agric.html $DEPLOYPATH
+    - /bin/cp agric.css $DEPLOYPATH
+    - /bin/cp blog.html $DEPLOYPATH
+    - /bin/cp blog.css $DEPLOYPATH
+    - /bin/cp climate.html $DEPLOYPATH
+    - /bin/cp climate.css $DEPLOYPATH
+    - /bin/cp contact.html $DEPLOYPATH
+    - /bin/cp contact.css $DEPLOYPATH
+    - /bin/cp counter.css $DEPLOYPATH
+    - /bin/cp donation.css $DEPLOYPATH
+    - /bin/cp donation.html $DEPLOYPATH
+    - /bin/cp education.css $DEPLOYPATH
+    - /bin/cp education.html $DEPLOYPATH
+    - /bin/cp gbv.css $DEPLOYPATH
+    - /bin/cp shelter.html $DEPLOYPATH
+    - /bin/cp shelter.css $DEPLOYPATH
+    - /bin/cp ourstory.css $DEPLOYPATH
+    - /bin/cp strategy.html $DEPLOYPATH
+    - /bin/cp strategy.css $DEPLOYPATH
+    - /bin/cp team.css $DEPLOYPATH
+    - /bin/cp thematic.css $DEPLOYPATH
+    - /bin/cp wash.html $DEPLOYPATH
+    - /bin/cp wash.css $DEPLOYPATH
+    - /bin/cp values.css $DEPLOYPATH
+    - /bin/cp volunteers.css $DEPLOYPATH
+    - /bin/cp script.js $DEPLOYPATH
+    - /bin/cp -R images $DEPLOYPATH
+    - /bin/cp -R navigation $DEPLOYPATH
+    
