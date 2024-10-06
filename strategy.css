@@ -5,7 +5,7 @@ body, html {
   overflow-x: hidden; /* Prevent horizontal scroll */
 }
 
-/*Strategy page styling*/
+/*speech page styling*/
 
 .st-showcase-area {
   height: 80vh;
@@ -63,7 +63,7 @@ body, html {
       font-size: 1.5rem; /* Adjusted for medium screens */
   }
 
-  .strategy {
+  .strategy  {
       padding: 3.125rem 5%; /* Reduced padding for smaller screens */
   }
 }
@@ -77,86 +77,152 @@ body, html {
       font-size: 1.2rem; /* Adjusted for small screens */
   }
 
-  .strategy {
+  .strategy  {
       padding: 1.875rem 5%; /* Reduced padding for smaller screens */
       background: rgb(245, 242, 238);
   }
 }
 
+#speech {
+  padding: 50px 0;
+  background: #f3f3f5;
+}
+
+.speech-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+}
+#speech h1 {
+  font-size: 4.3rem;
+}
+
+#speech h2 {
+  font-size: 2.3rem;
+}
+
+#speech p {
+  font-size: 1.2rem;
+  color: #555;
+}
+
+#speech .small {
+  font-size: 1.2rem;
+  color: #666;
+  font-weight: 600;
+}
+
+.speech-img {
+  flex: 1 1 400px;
+  padding: 30px;
+  transform: translateX(150%);
+  animation: speech-img-animation 1s ease-in-out forwards;
+}
+
+@keyframes speech-img-animation {
+  100% {
+    transform: translate(0);
+  }
+}
+
+.speech-text {
+  flex: 1 1 400px;
+  padding: 30px;
+  margin: auto;
+  transform: translate(-150%);
+  animation: speech-text-animation 1s ease-in-out forwards;
+}
+
+@keyframes speech-text-animation {
+  100% {
+    transform: translate(0);
+  }
+}
+
+.speech-img img {
+  display: block;
+  height: 400px;
+  max-width: 100%;
+  margin: auto;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 90px 10px 10px 10px;
+}
+
+
 /* Timeline styling */
-.timeline-items {
+/* .timeline-items {
   max-width: 100%;
   margin: auto;
   display: flex;
   flex-wrap: wrap;
   position: relative;
   margin-bottom: 3.125rem; /* Equivalent to 50px */
-  width: 80%;
+  /*width: 80%;
 }
 
-.timeline-items::before {
+/*.timeline-items::before {
   content: "";
   position: absolute;
   width: 0rem; /* Equivalent to 5px */
-  height: 100%;
+  /*height: 100%;
   background-color: rgb(132, 148, 192);
   left: calc(50% - 2.5px);
 }
 
 .timeline-items:nth-child(odd) {
   padding-right: calc(50% + 2rem); /* Adjusted for more flexibility */
-  text-align: center;
+  /*text-align: center;
 }
 
 .timeline-items:nth-child(even) {
   padding-left: calc(50% + 2rem); /* Adjusted for more flexibility */
-}
+/*}
 
 .timeline-dot {
   height: 1.3125rem; /* Equivalent to 21px */
-  width: 1.3125rem;
+  /*width: 1.3125rem;
   background-color: rgb(51, 94, 134);
   box-shadow: 0 0 25px rgb(35, 100, 240), 0 0 50px rgb(23, 135, 240);
   position: absolute;
   left: calc(50% - 10.5px);
   border-radius: 50%;
   top: 0.625rem; /* Equivalent to 10px */
-}
+/*}
 
 .timeline-contents {
   background-color: rgb(17, 62, 107);
   border: 0.125rem solid rgb(32, 82, 218); /* Equivalent to 2px */
-  padding: 4.375rem 3.125rem; /* Equivalent to 70px 50px */
-  border-radius: 4rem;
+  /*padding: 4.375rem 3.125rem; /* Equivalent to 70px 50px */
+  /*border-radius: 4rem;
   box-shadow: 0 0 0.625rem rgb(0, 195, 255); /* Equivalent to 10px */
-  cursor: pointer;
+  /*cursor: pointer;
   transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
 .timeline-contents:hover {
   transform: scale(1.05);
   box-shadow: 0 0 0.9375rem black; /* Equivalent to 15px */
-}
+/*}
 
 .timeline-contents h3 {
   font-size: 1.25rem; /* Equivalent to 20px */
-  color: rgb(234, 239, 243);
+  /*color: rgb(234, 239, 243);
   margin: 0 0 0.625rem; /* Equivalent to 10px */
-  font-weight: 500;
+  /*font-weight: 500;
 }
 
 .timeline-contents p {
   color: rgb(234, 235, 236);
   font-size: 1rem; /* Equivalent to 16px */
-  font-weight: 300;
+  /*font-weight: 300;
   line-height: 1.375rem; /* Equivalent to 22px */
-}
+/*}
 
 @media (max-width: 900px) {
   .timeline-items {
       width: calc(50% - 2rem);
       margin-bottom: 2.5rem; /* Equivalent to 40px */
-  }
+  /*}
   .timeline-items::before {
       left: calc(50% - 2.5px);
   }
@@ -172,7 +238,7 @@ body, html {
   .timeline-items {
       width: 100%;
       margin-bottom: 1.875rem; /* Equivalent to 30px */
-  }
+  /*}
   .timeline-items::before {
       left: calc(50% - 2.5px);
   }
@@ -189,19 +255,19 @@ body, html {
       text-transform: uppercase;
       margin-top: 1rem;
       font-size: 2rem; /* Adjusted font size */
-  }
+  /*}
   .st-showcase-container p {
       margin-top: 1rem;
       font-size: 1.5rem; /* Adjusted font size */
-      color: white;
+      /*color: white;
   }
-  .strategy h2 {
+  .speech h2 {
       margin-bottom: 2rem;
   }
   .timeline-items {
       max-width: 100%;
       margin: auto;
       margin-bottom: 1.25rem; /* Equivalent to 20px */
-      width: 100%;
-  }
-}
+      /*width: 100%;
+  /*}
+}*/

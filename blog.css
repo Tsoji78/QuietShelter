@@ -103,14 +103,14 @@ body, html {
 }
 
 .blog-text span {
-  color: #0b1bff;
+  color: #0d0d0e;
   font-size: 0.9rem;
 }
 
 .blog-text .blog-title {
   font-size: 1.3rem;
   font-weight: 500;
-  color: #1a0fb8;
+  color: #030303;
   transition: color 0.3s ease;
 }
 
@@ -119,7 +119,7 @@ body, html {
 }
 
 .blog-text p {
-  color: #0b2e79;
+  color: #111111;
   font-size: 0.9rem;
   display: -webkit-box;
   -webkit-line-clamp: 3;

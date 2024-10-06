@@ -5,6 +5,7 @@
   box-sizing: border-box;
   font-family:  'Tangerine', serif;
   
+  
  
  
   
@@ -162,7 +163,7 @@ section {
 }
 
 .home .media-icons a:not(:last-child) {
-  margin-bottom: 20px;
+  margin-bottom: 25px;
 }
 
 .home .media-icons a:hover {
@@ -261,28 +262,29 @@ section {
     font-style: italic;
   }
   .home .content p {
-    margin-bottom: 25px;
+    margin-bottom: 20px;
   }
 }
 
 /*Mobile nav*/
-
-.footer{
-  position: relative;
-  border-bottom: 0;
+.footer {
+  position: absolute;
   width: 100%;
   padding: 40px 0;
-  background-color: #ccc232d7;
-  
+  background-color: #f7e11b;
+  color: #333;
+  font-family: Arial, sans-serif;
+  box-sizing: border-box; /* Ensures padding is included within the element's size */
 }
-.footer .social{
+
+.footer .social {
   text-align: center;
   padding-bottom: 25px;
-  color: rgb(2, 17, 56);
 }
-.footer .social a{
-  font-size: 25px;
-  color: rgb(28, 38, 99);
+
+.footer .social a {
+  font-size: 20px;
+  color: #1C2663;
   margin: 0 10px;
   transition: 0.3s ease-in-out;
   text-decoration: none;
@@ -291,47 +293,67 @@ section {
   border-radius: 50%;
   width: 42px;
   height: 42px;
+  background-color: #f5f5f5;
   text-align: center;
-  box-shadow: blueviolet;
+  border: 1px solid #ccc;
 }
-.footer .social a:hover{
-  transform: scale(1.2)translateY(-10px);
-  box-shadow: 0 0 25px rgb(3, 58, 110);
-  color: rgb(85, 78, 78);
-  background-color: rgb(13, 107, 107);
+
+.footer .social a:hover {
+  transform: scale(1.2) translateY(-5px);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+  background-color: #0d6b6b;
+  color: #fff;
 }
-.footer ul{
+
+.footer ul {
   margin-top: 0;
   padding: 0;
-  font-size: 18px;
+  font-size: 16px;
   line-height: 1.6;
-  margin-bottom: 0;
+  list-style: none;
   text-align: center;
-  
 }
-.footer ul li a{
-  color: rgb(71, 78, 87);
-  border-bottom: 3px solid rgb(5, 75, 122);
-}
-.footer ul li a:hover{
-  border-bottom: 3px solid rgb(6, 29, 240);
-  transform: scale(1.2)translateY(-10px);
-  box-shadow: 0 0 25px rgb(18, 14, 212);
-}
-.footer ul li{
+
+.footer ul li {
   display: inline-block;
   padding: 0 15px;
 }
-.footer .copyright{
-  margin-top: 50%;
-  text-align: center;
-  font-size: 16px;
-  color: rgb(25, 122, 167);
 
+.footer ul li a {
+  color: #474e57;
+  text-decoration: none;
+  transition: 0.3s ease-in-out;
+  border-bottom: 2px solid transparent;
 }
+
+.footer ul li a:hover {
+  border-bottom: 2px solid #061de0;
+  transform: scale(1.1) translateY(-3px);
+}
+
 .footer p {
-  font-size: 12px;
+  font-size: 14px;
   line-height: 1.6;
   margin-bottom: 0;
-  text-align: center; 
+  text-align: center;
+  color: #197aa7;
 }
+
+.footer p:last-child {
+  font-size: 12px;
+  color: #555;
+  margin-top: 5px;
+}
+
+html, body {
+  box-sizing: border-box; /* Apply to entire document */
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit; /* Ensure all elements use border-box */
+}
+
