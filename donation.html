@@ -7,7 +7,7 @@
   <title>QuietShelter Foundation</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
   <link rel="stylesheet"  href="style.css">
-  <link rel="stylesheet"  href="donation.css">
+  <link rel="stylesheet"  href="don.css">
   <link rel="stylesheet"  href="volunteer.css">
   <link rel="stylesheet"  href="navigation/nav.css">
 
@@ -33,91 +33,107 @@
     </div>
     
   </header>
-  <section class="donation" id="donation">
-    <div class="donation-container">
-        <h1 class="Donation" id="donation">Donations</h1>
+  <section class="hero">
+    <h1>Make a Difference Today</h1>
+    <p>Your donation can change lives. Join us in our mission to create a better world for everyone. Every contribution counts!</p>
+    <a href="#" class="cta-button">Donate Now</a>
+  </section>
+
+  <section class="progress-section">
+    <div class="progress-container">
+      <h2>Our Current Progress</h2>
+      <div class="progress-bar">
+        <div class="progress-fill"></div>
+      </div>
+      <div class="stats">
+        <div class="stat-box">
+          <h3>$1,000</h3>
+          <p>Raised so far</p>
+        </div>
+        <div class="stat-box">
+          <h3>$10,000</h3>
+          <p>Target goal</p>
+        </div>
+        <div class="stat-box">
+          <h3>234</h3>
+          <p>Total donors</p>
+        </div>
+      </div>
     </div>
   </section>
 
-<section id="charity" class="charity">
-    <div class="charity-heading">
-        <h1>Donate To The Right Cause</h1>
-        <p>The essence of touching lives is crafted in amicable giving</p>
+  <section class="featured-cause">
+    <div class="featured-image">
+      <img src="images/waterboy.jpg" alt="Poverty Relief" style="width: 100%; height: 100%; object-fit: cover;">
     </div>
-</section> 
+    <div class="featured-content">
+      <h2>Combat Global Poverty</h2>
+      <p>Nearly 700 million people live in extreme poverty worldwide, surviving on less than $1.90 a day. Your support helps provide:</p>
+      <ul style="list-style-position: inside; margin-bottom: 1.5rem; color: #666;">
+        <li>Emergency food and clean water</li>
+        <li>Sustainable farming equipment and training</li>
+        <li>Education and vocational training</li>
+        <li>Microfinance opportunities</li>
+        <li>Healthcare access for families</li>
+      </ul>
+      <p>Together, we can break the cycle of poverty and create lasting change for generations to come.</p>
+      <a href="#" class="cta-button">Support This Cause</a>
+    </div>
+  </section>
 
-<section id="charity-cards-section">
-  <div class="charity-container">
-    <div class="charity-card">
-      <div class="charity-card-header">
-        <img src="images/climate.jpg" alt="rover" />
-      </div>
-      <div class="charity-card-body">
-        <span class="tag tag-teal">Climate Change</span>
-        <h4>Join us in providing a safe haven for vulnerable children fleeing the harsh 
-          realities of climate change. Your support can offer them the comfort and security 
-          they so desperately need </h4>
-        <p>Our target has been to achieve $5000 Milestone</p>
-        <div class="progress-container">
-          <div class="progress-bar" style="width: 10%;"></div>
-          <span class="progress-text">10% funded</span>
+  <section class="cause-cards">
+    <div class="cause-card">
+      <img src="images/climate.jpg" alt="Education Initiative" class="cause-image">
+      <div class="cause-content">
+        <h3>Climate Change</h3>
+        <p>Join us in providing a safe haven for vulnerable children fleeing the harsh 
+            realities of climate change. Your support can offer them the comfort and security 
+            they so desperately need</p>
+        <div class="donation-progress">
+          <div class="progress-bar-fill" style="width: 75%"></div>
         </div>
-        <a href="#https://www.paypal.com/donate/?hosted_button_id=D7VBJYKEHZK7A" class="donation-btn">Donate Now</a>
-      
-      </div>
-    </div>
-    <div class="charity-card">
-      <div class="charity-card-header">
-        <img src="images/kids.jpg" alt="balloons" />
-      </div>
-      <div class="charity-card-body">
-        <span class="tag tag-purple">Health</span>
-        <h4>Together, we can address health challenges in communities where 
-          basic medical care is out of reach. Join us in making a life-saving difference.</h4>
-        <p>Our target has been to achieve $7000 Milestone</p>
-        <div class="progress-container">
-          <div class="progress-bar" style="width: 20%;"></div>
-          <span class="progress-text">20% funded</span>
+        <div class="donation-info">
+          <span>$7,500 raised</span>
+          <span>Goal: $5,000</span>
         </div>
-        <a href="#https://donate.stripe.com/test_dR67vudBO68t0g0288" class="donation-btn">Donate Now</a>
-        
+        <a href="#" class="donate-button">Donate</a>
       </div>
     </div>
-    <div class="charity-card">
-      <div class="charity-card-header">
-        <img src="images/gras.jpg" alt="city" />
-      </div>
-      <div class="charity-card-body">
-        <span class="tag tag-pink">Agriculture</span>
-        <h4>Discover how we are empowering young people in the agricultural sector,
-           equipping them with the skills and resources to cultivate a brighter future</h4>
-        <p>Our target has been to achieve $4000 Milestone</p>
-        <div class="progress-container">
-          <div class="progress-bar" style="width: 15%;"></div>
-          <span class="progress-text">15% funded</span>
+
+    <div class="cause-card">
+      <img src="images/kids.jpg" alt="Food Security" class="cause-image">
+      <div class="cause-content">
+        <h3>Healthcare Access</h3>
+        <p>Together, we can address health challenges in communities where 
+            basic medical care is out of reach. Join us in making a life-saving difference.</p>
+        <div class="donation-progress">
+          <div class="progress-bar-fill" style="width: 60%"></div>
         </div>
-        <a href="#donate-now" class="donation-btn">Donate Now</a>
-        
+        <div class="donation-info">
+          <span>$3,000 raised</span>
+          <span>Goal: $5,000</span>
+        </div>
+        <a href="#" class="donate-button">Donate</a>
       </div>
     </div>
-  </div>
-</section>
-<section id="Volunteer">
-  <div class="Volunteer-wrapper container">
-    <div class="Volunteer-text">
-      <h1><em>Volunteer</em></h1>
-      <h3>Small acts, when multiplied by millions, can transform the world. Volunteer today </h3>
-      <p>
-        Volunteers are crucial to our movement, driving significant community impact through 
-        their dedication and hard work. Their efforts extend our reach, enhance our initiatives,
-         and foster unity. By organizing campaigns, providing services, and contributing their skills, volunteers bring energy and compassion, inspiring hope and empowering individuals.
-      </p>
+
+    <div class="cause-card">
+      <img src="images/gras.jpg" alt="Healthcare Access" class="cause-image">
+      <div class="cause-content">
+        <h3>Food Security</h3>
+        <p>Discover how we are empowering young people in the agricultural sector,
+            equipping them with the skills and resources to cultivate a brighter future</p>
+        <div class="donation-progress">
+          <div class="progress-bar-fill" style="width: 45%"></div>
+        </div>
+        <div class="donation-info">
+          <span>$2,500 raised</span>
+          <span>Goal: $5,000</span>
+        </div>
+        <a href="#" class="donate-button">Donate</a>
+      </div>
     </div>
-    <div class="Volunteer-img">
-      <img src="images/image_transparent_Craiyon (7).png" alt="Volunteer" />
-    </div>
-  </div>
-</section>
+  </section>
 
 
 
