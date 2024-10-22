@@ -175,6 +175,11 @@ body, html {
 
 /* For mobile devices */
 @media (max-width: 550px) {
+  .blog-container {
+    display: grid;
+    width: 95%;
+  }
+  
   .blog-box {
     margin: 1.25rem 0.625rem; /* Adjusted to rem */
   }

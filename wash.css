@@ -9,7 +9,7 @@
 /* Thematic Area */
 .wash-area {
   height: 80vh;
-  background: url("images/wash2.png") no-repeat center/cover;
+  background: url("images/waterboy.jpg") no-repeat center/cover;
 }
 
 .wash-container {
@@ -19,7 +19,7 @@
   justify-content: center;
   height: 100%;
   padding: 0 5%;
-  color: rgb(39, 36, 36);
+  color: rgb(252, 251, 251);
   font-size: 1.625rem;
   text-align: center;
 }

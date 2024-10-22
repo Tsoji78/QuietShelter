@@ -136,3 +136,68 @@ document.addEventListener("DOMContentLoaded", function() {
   setActiveLink();
 });
 
+//Testing
+//<script>
+  // Open Modal
+  //function openModal() {
+    //document.getElementById('subscriptionModal').style.display = 'flex';
+  //}
+
+  // Close Modal
+  //function closeModal() {
+   // document.getElementById('subscriptionModal').style.display = 'none';
+  //}
+
+  // Handle form submission
+  //document.getElementById('subscribeForm').addEventListener('submit', function(event) {
+    //event.preventDefault();
+    //const email = document.getElementById('email').value;
+
+    // Send data to backend or display a success message
+    //alert(`Thank you for subscribing with ${email}!`);
+    //closeModal();
+  //});
+//</script>
+// Function to open the modal
+// Modal functionality
+ // Back to Top Button functionality
+ const backToTopButton = document.getElementById('backToTop');
+
+ window.onscroll = function() {
+     if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+         backToTopButton.style.display = 'block';
+     } else {
+         backToTopButton.style.display = 'none';
+     }
+ };
+
+ backToTopButton.addEventListener('click', function() {
+     document.body.scrollTop = 0; // For Safari
+     document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+ });
+
+ function openModal() {
+     const modal = document.getElementById('subscribeModal');
+     modal.style.display = 'flex';
+     setTimeout(() => modal.classList.add('active'), 10);
+ }
+
+ function closeModal() {
+     const modal = document.getElementById('subscribeModal');
+     modal.classList.remove('active');
+     setTimeout(() => modal.style.display = 'none', 300);
+ }
+
+ // Close modal when clicking outside
+ document.getElementById('subscribeModal').addEventListener('click', (e) => {
+     if (e.target === e.currentTarget) closeModal();
+ });
+
+ // Handle form submission
+ document.getElementById('subscribeForm').addEventListener('submit', (e) => {
+     e.preventDefault();
+     // Add your form submission logic here
+     closeModal();
+ });
+
+

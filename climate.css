@@ -19,7 +19,7 @@
     justify-content: center;
     height: 100%;
     padding: 0 5%;
-    color: rgb(39, 36, 36);
+    color: rgb(250, 247, 247);
     font-size: 1.625rem;
     text-align: center;
   }
@@ -137,5 +137,81 @@
   
     .post-content h3.header-one {
       font-size: 1.75rem;
-   
+      .footer {
+        position: absolute;
+        width: 100%;
+        padding: 40px 0;
+        background-color: #f7e11b;
+        color: #333;
+        font-family: Arial, sans-serif;
+        box-sizing: border-box; /* Ensures padding is included within the element's size */
+      }
+      
+      .footer .social {
+        text-align: center;
+        padding-bottom: 25px;
+      }
+      
+      .footer .social a {
+        font-size: 20px;
+        color: #1C2663;
+        margin: 0 10px;
+        transition: 0.3s ease-in-out;
+        text-decoration: none;
+        display: inline-block;
+        line-height: 42px;
+        border-radius: 50%;
+        width: 42px;
+        height: 42px;
+        background-color: #f5f5f5;
+        text-align: center;
+        border: 1px solid #ccc;
+      }
+      
+      .footer .social a:hover {
+        transform: scale(1.2) translateY(-5px);
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+        background-color: #0d6b6b;
+        color: #fff;
+      }
+      
+      .footer ul {
+        margin-top: 0;
+        padding: 0;
+        font-size: 16px;
+        line-height: 1.6;
+        list-style: none;
+        text-align: center;
+      }
+      
+      .footer ul li {
+        display: inline-block;
+        padding: 0 15px;
+      }
+      
+      .footer ul li a {
+        color: #474e57;
+        text-decoration: none;
+        transition: 0.3s ease-in-out;
+        border-bottom: 2px solid transparent;
+      }
+      
+      .footer ul li a:hover {
+        border-bottom: 2px solid #061de0;
+        transform: scale(1.1) translateY(-3px);
+      }
+      
+      .footer p {
+        font-size: 14px;
+        line-height: 1.6;
+        margin-bottom: 0;
+        text-align: center;
+        color: #197aa7;
+      }
+      
+      .footer p:last-child {
+        font-size: 12px;
+        color: #555;
+        margin-top: 5px;
+      }
   

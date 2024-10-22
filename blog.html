@@ -9,6 +9,7 @@
   <link rel="stylesheet"  href="style.css">
   <link rel="stylesheet"  href="blog.css">
   <link rel="stylesheet"  href="navigation/nav.css">
+  
 </head>
 <body>
   <header>
@@ -135,36 +136,60 @@
 
 
   </section>
-  <footer class="footer" id="footer">
-    <div class="social">
-      <a href ="#"><i class='fab fa-facebook-f'></i></a>
-      <a href ="#"><i class='fab fa-instagram' ></i></a>
-      <a href ="#"><i class='fab fa-twitter' ></i></a> 
+  <button id="backToTop" title="Go to top">↑</button>
+    
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-section">
+                <img src="images/Logo.png" alt="QuietShelter Logo" class="footer-logo">
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul class="footer-nav">
+                    <li><a href="careers.html">Careers</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="about.html">Our Story</a></li>
+                    <li><a href="donation.html">Donation</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Take Action</h3>
+                <div class="footer-buttons">
+                    <button class="btn btn-donate" onclick="window.location.href='donation.html'">
+                        Donate Now
+                    </button>
+                    <button class="btn btn-subscribe" onclick="openModal()">
+                        Subscribe to Newsletter
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2024 QuietShelter Empowerment Foundation | All Rights Reserved</p>
+            <p>No 2A, Gibson Jalo Crescent, beside Government House Dougirei, Yola North, Adamawa State.</p>
+        </div>
+    </footer>
+
+    <!-- Subscribe Modal -->
+    <div id="subscribeModal" class="modal">
+        <div class="modal-content">
+            <span class="modal-close" onclick="closeModal()">&times;</span>
+            <h2>Subscribe to our Newsletter</h2>
+            <form class="subscribe-form" id="subscribeForm">
+                <input type="email" placeholder="Enter your email" required>
+                <button type="submit">Subscribe</button>
+            </form>
+        </div>
     </div>
-
-    <ul class="list">
-      <li>
-        <a href ="blog.html">Careers</a>
-      </li>
-
-      <li>
-        <a href ="contact.html">Contact</a>
-      </li>
-
-      <li>
-        <a href ="about.html">Our Story</a>
-      </li>
-
-      <li>
-        <a href ="donation.html">Donation</a>
-      </li>
-    </ul>
-    <p>
-      &copy;QuietShelter Empowerment Foundation | All Rights Reserve</p>
-      <p>No 2A,Gibson Jalo Crescent,beside Government House Dougirei,Yola North,Adamawa State.</p>
-    </div>
-  </footer>
-
+  
   
 
   <script src = "script.js"></Script>  

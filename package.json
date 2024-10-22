@@ -1,0 +1,14 @@
+{
+  "name": "quietshelter",
+  "version": "1.0.0",
+  "description": "Donation",
+  "main": "script.js",
+  "scripts": {
+    "test": "npm run"
+  },
+  "keywords": [
+    "quietshelter"
+  ],
+  "author": "Torrik",
+  "license": "ISC"
+}
