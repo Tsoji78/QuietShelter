@@ -1,7 +1,7 @@
 ---
 deployment:
   tasks:
-    - export DEPLOYPATH=/home/Quisef/public_html/
+    - export DEPLOYPATH=/home/quietshe/quisef/public_html/
     - /bin/cp index.html $DEPLOYPATH
     - /bin/cp style.css $DEPLOYPATH
     - /bin/cp about.html $DEPLOYPATH
@@ -25,12 +25,13 @@ deployment:
     - /bin/cp ourstory.css $DEPLOYPATH
     - /bin/cp strategy.html $DEPLOYPATH
     - /bin/cp strategy.css $DEPLOYPATH
+    - /bin/cp careers.html $DEPLOYPATH
+    - /bin/cp careers.css $DEPLOYPATH
     - /bin/cp team.css $DEPLOYPATH
     - /bin/cp thematic.css $DEPLOYPATH
     - /bin/cp wash.html $DEPLOYPATH
     - /bin/cp wash.css $DEPLOYPATH
     - /bin/cp values.css $DEPLOYPATH
-    - /bin/cp volunteers.css $DEPLOYPATH
     - /bin/cp script.js $DEPLOYPATH
     - /bin/cp -R images $DEPLOYPATH
     - /bin/cp -R navigation $DEPLOYPATH
