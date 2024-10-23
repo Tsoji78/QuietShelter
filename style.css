@@ -2,7 +2,6 @@
 .kaushan-script-regular {
   font-weight: 400;
   font-style: normal;
-  font-family: "Italianno", cursive;
 }
 
 
@@ -11,7 +10,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  /*font-family:  'poppins', serif;*/
+
   
 }
 
@@ -36,6 +35,7 @@
   --primary-color: #ffffff;
   --hamburger-color: #dbd819;
   --link:#071ff1;
+  --font-family: "Italianno", cursive;
 
 }
 
@@ -49,10 +49,10 @@
 }
 
 body {
-  font-family: "Italianno", cursive;
   line-height: 1.6;
   background: #f4f4f4;
   color: #333;
+  font-family: var(--font-family);
 }
 
 /* Header styles */

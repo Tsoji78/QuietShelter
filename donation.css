@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Italianno", cursive;
+   
   }
 
   .hero {
@@ -73,7 +73,7 @@
   .progress-fill {
     background: #4647a7;
     height: 100%;
-    width: 75%;
+    width: 15%;
     border-radius: 15px;
     transition: width 1.5s ease-in-out;
   }
