@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 .kaushan-script-regular {
   font-weight: 400;
   font-style: normal;
@@ -35,7 +35,7 @@
   --primary-color: #ffffff;
   --hamburger-color: #dbd819;
   --link:#071ff1;
-  --font-family: "Italianno", cursive;
+  --font-family: "Montserrat", sans-serif;
 
 }
 
@@ -317,9 +317,9 @@ section {
 }
 
 .footer-logo {
-  width: 150px;
+  width: 50%;
   height: auto;
-  margin-bottom: 1rem;
+  margin-bottom:1rem;
 }
 
 .social-links {

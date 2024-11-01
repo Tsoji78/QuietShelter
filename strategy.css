@@ -10,7 +10,7 @@ body, html {
 
 .st-showcase-area {
   height: 80vh;
-  background: url("images/chill.jpg");
+  background: url("images/pic5.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -29,8 +29,9 @@ body, html {
 }
 
 .st-showcase-container h1 {
-  color: rgb(250, 249, 244);
+  color: rgb(243, 244, 250);
   font-size: 4.375rem; /* Equivalent to 70px */
+  margin-top: 25rem;
 }
 
 .st-main-title {
