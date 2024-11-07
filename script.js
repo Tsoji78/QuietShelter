@@ -1,3 +1,6 @@
+const supabaseUrl = 'https://your-supabase-url.supabase.co';
+const supabaseKey = 'your-supabase-anon-key';
+const supabase = supabase.createClient(supabaseUrl, supabaseKey);
 
 document.addEventListener("DOMContentLoaded", function() {
   const menuBtn = document.querySelector(".menu-btn");
@@ -136,31 +139,6 @@ document.addEventListener("DOMContentLoaded", function() {
   setActiveLink();
 });
 
-//Testing
-//<script>
-  // Open Modal
-  //function openModal() {
-    //document.getElementById('subscriptionModal').style.display = 'flex';
-  //}
-
-  // Close Modal
-  //function closeModal() {
-   // document.getElementById('subscriptionModal').style.display = 'none';
-  //}
-
-  // Handle form submission
-  //document.getElementById('subscribeForm').addEventListener('submit', function(event) {
-    //event.preventDefault();
-    //const email = document.getElementById('email').value;
-
-    // Send data to backend or display a success message
-    //alert(`Thank you for subscribing with ${email}!`);
-    //closeModal();
-  //});
-//</script>
-// Function to open the modal
-// Modal functionality
- // Back to Top Button functionality
  const backToTopButton = document.getElementById('backToTop');
 
  window.onscroll = function() {
@@ -197,7 +175,31 @@ document.addEventListener("DOMContentLoaded", function() {
  document.getElementById('subscribeForm').addEventListener('submit', (e) => {
      e.preventDefault();
      // Add your form submission logic here
+     document.getElementById('subscribeForm').addEventListener('submit', async function(event) {
+      event.preventDefault();
+      const email = event.target.email.value;
+
+      const { data, error } = await supabase.from('subscribers').insert([{ email }]);
+
+      if (error) {
+          alert('There was an error. Please try again.');
+      } else {
+          alert('Thank you for subscribing!');
+      }
+  });
      closeModal();
  });
+
+ // Select all anchor tags and remove `.html` from their hrefs
+// Better version of the code
+document.addEventListener('DOMContentLoaded', () => {
+  document.querySelectorAll('a[href$=".html"]').forEach(link => {
+    // Only modify internal links and ignore full URLs
+    if (!link.href.startsWith('http')) {
+      link.href = link.href.replace('.html', '');
+    }
+  });
+});
+
 
 
