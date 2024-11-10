@@ -1,7 +1,3 @@
-const supabaseUrl = 'https://your-supabase-url.supabase.co';
-const supabaseKey = 'your-supabase-anon-key';
-const supabase = supabase.createClient(supabaseUrl, supabaseKey);
-
 document.addEventListener("DOMContentLoaded", function() {
   const menuBtn = document.querySelector(".menu-btn");
   const navigation = document.querySelector(".navigation");
