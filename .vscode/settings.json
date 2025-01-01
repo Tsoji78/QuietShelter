@@ -1,3 +1,4 @@
 {
-    "git-blame.configs.statusBar.length": "short"
+    "git-blame.configs.statusBar.length": "short",
+    "liveServer.settings.port": 5501
 }
