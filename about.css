@@ -152,4 +152,6 @@ body, html {
 
   .mvv-block .mvv-content {
     width: 100%;
-    padding: 
+    padding: 1rem;
+  }
+}

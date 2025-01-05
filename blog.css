@@ -138,6 +138,25 @@ body, html {
   color: #e6d008;
 }
 
+/* Author Section */
+/*.author {
+  display: flex;
+  align-items: center;
+  margin-top: 1.25rem; /* Adjusted to rem 
+}*/
+
+/*.author img {
+  border-radius: 50%;
+  width: 1.3%; /* Adjusted size 
+  height: 1.3%; /* Adjusted size 
+  
+}
+
+.author-name {
+  font-size: 1rem;
+  color: #111111;
+}*/
+
 /* Media Queries for Responsiveness */
 
 /* For large screens and tablets */
