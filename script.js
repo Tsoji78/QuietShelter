@@ -198,39 +198,37 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 //contact
+const contactForm = document.getElementById("contactForm");
+  const responseMessage = document.getElementById("responseMessage");
 
-  document.getElementById("submit-btn").addEventListener("click", async (e) => {
+  contactForm.addEventListener("submit", async (e) => {
     e.preventDefault();
 
-    // Get input values
-    const name = document.getElementById("name").value.trim();
-    const email = document.getElementById("email").value.trim();
-    const message = document.getElementById("message").value.trim();
-
-    if (!name || !email || !message) {
-      alert("Please fill in all fields.");
-      return;
-    }
+    // Get form data
+    const name = document.getElementById("name").value;
+    const email = document.getElementById("email").value;
+    const message = document.getElementById("message").value;
 
     try {
-      // Add message to Firestore
-      const docRef = await db.collection("contacts").add({
-        name,
-        email,
-        message,
-        timestamp: new Date().toISOString(),
-      });
+      // Save data to Firestore
+      await db.collection("contacts").add({ name, email, message, timestamp: new Date() });
 
-      // Clear the form and show success message
-      document.getElementById("name").value = "";
-      document.getElementById("email").value = "";
-      document.getElementById("message").value = "";
-      document.getElementById("status").style.display = "block";
+      // Show success message
+      responseMessage.style.display = "block";
+
+      // Reset form fields
+      contactForm.reset();
+
+      // Hide success message after 3 seconds
+      setTimeout(() => {
+        responseMessage.style.display = "none";
+      }, 3000);
     } catch (error) {
-      console.error("Error submitting message: ", error);
-      alert("Failed to send your message. Please try again.");
+      console.error("Error submitting form:", error);
+      alert("An error occurred while sending your message. Please try again.");
     }
   });
+  
 
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "https://www.gstatic.com/firebasejs/11.2.0/firebase-app.js";

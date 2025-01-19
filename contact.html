@@ -42,19 +42,15 @@
 
       <div class="form-container">
         <h2>Contact Us</h2>
-        <input id="name" type="text" placeholder="Your Name" required />
-        <input id="email" type="email" placeholder="E-Mail" required />
-        <textarea
-          id="message"
-          cols="30"
-          rows="6"
-          placeholder="Type Your Message"
-          required
-        ></textarea>
-        <button id="submit-btn" class="btn btn-primary">Submit</button>
-        <p id="status" style="color: green; display: none;">Message sent successfully!</p>
+        <form id="contactForm">
+          <input type="text" id="name" placeholder="Your Name" required />
+          <input type="email" id="email" placeholder="E-Mail" required />
+          <textarea id="message" cols="30" rows="6" placeholder="Type Your Message" required></textarea>
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+        <p id="responseMessage" style="display:none; color: green;">Message sent successfully!</p>
       </div>
-      
+    </div>
     </div>
   </section>
   <footer class="footer">
