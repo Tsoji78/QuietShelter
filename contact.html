@@ -42,15 +42,19 @@
 
       <div class="form-container">
         <h2>Contact Us</h2>
-        <input type="text" placeholder="Your Name" />
-        <input type="email" placeholder="E-Mail" />
+        <input id="name" type="text" placeholder="Your Name" required />
+        <input id="email" type="email" placeholder="E-Mail" required />
         <textarea
+          id="message"
           cols="30"
           rows="6"
           placeholder="Type Your Message"
+          required
         ></textarea>
-        <a href="#" class="btn btn-primary">Submit</a>
+        <button id="submit-btn" class="btn btn-primary">Submit</button>
+        <p id="status" style="color: green; display: none;">Message sent successfully!</p>
       </div>
+      
     </div>
   </section>
   <footer class="footer">
@@ -114,6 +118,22 @@
 
  
 <script src="script.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.16.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.16.0/firebase-firestore.js"></script>
+<script>
+  const firebaseConfig = {
+    apiKey: "AIzaSyAB-WbFZTQ8bfHA3W44Q9ithgDGWos1jss",
+    authDomain: "quietshelter-b5f54.firebaseapp.com",
+    projectId: "quietshelter-b5f54",
+    storageBucket: "quietshelter-b5f54.firebasestorage.app",
+    messagingSenderId: "964395764892",
+    appId: "1:964395764892:web:8cb55955d6f4a92f08f159"
+};
+
+  const app = firebase.initializeApp(firebaseConfig);
+  const db = firebase.firestore(app);
+</script>
+
   
 </body>
 

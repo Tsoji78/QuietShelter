@@ -197,5 +197,40 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 
+//contact
+<script>
+  document.getElementById("submit-btn").addEventListener("click", async (e) => {
+    e.preventDefault();
+
+    // Get input values
+    const name = document.getElementById("name").value.trim();
+    const email = document.getElementById("email").value.trim();
+    const message = document.getElementById("message").value.trim();
+
+    if (!name || !email || !message) {
+      alert("Please fill in all fields.");
+      return;
+    }
+
+    try {
+      // Add message to Firestore
+      const docRef = await db.collection("contacts").add({
+        name,
+        email,
+        message,
+        timestamp: new Date().toISOString(),
+      });
+
+      // Clear the form and show success message
+      document.getElementById("name").value = "";
+      document.getElementById("email").value = "";
+      document.getElementById("message").value = "";
+      document.getElementById("status").style.display = "block";
+    } catch (error) {
+      console.error("Error submitting message: ", error);
+      alert("Failed to send your message. Please try again.");
+    }
+  });
+</script>
 
 
