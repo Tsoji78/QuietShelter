@@ -198,36 +198,6 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 //contact
-const contactForm = document.getElementById("contactForm");
-  const responseMessage = document.getElementById("responseMessage");
-
-  contactForm.addEventListener("submit", async (e) => {
-    e.preventDefault();
-
-    // Get form data
-    const name = document.getElementById("name").value;
-    const email = document.getElementById("email").value;
-    const message = document.getElementById("message").value;
-
-    try {
-      // Save data to Firestore
-      await db.collection("contacts").add({ name, email, message, timestamp: new Date() });
-
-      // Show success message
-      responseMessage.style.display = "block";
-
-      // Reset form fields
-      contactForm.reset();
-
-      // Hide success message after 3 seconds
-      setTimeout(() => {
-        responseMessage.style.display = "none";
-      }, 3000);
-    } catch (error) {
-      console.error("Error submitting form:", error);
-      alert("An error occurred while sending your message. Please try again.");
-    }
-  });
   
 
 // Import the functions you need from the SDKs you need

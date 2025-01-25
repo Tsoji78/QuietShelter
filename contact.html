@@ -48,8 +48,9 @@
           <textarea id="message" cols="30" rows="6" placeholder="Type Your Message" required></textarea>
           <button type="submit" class="btn btn-primary">Submit</button>
         </form>
-        <p id="responseMessage" style="display:none; color: green;">Message sent successfully!</p>
+        <p id="responseMessage" style="display:none; color: rgb(128, 119, 0);">Message sent successfully!</p>
       </div>
+      
     </div>
     </div>
   </section>
@@ -112,6 +113,60 @@
   </div>
 </div>
 
+<script type="module">
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/9.17.2/firebase-app.js";
+  import { getFirestore, collection, addDoc } from "https://www.gstatic.com/firebasejs/9.17.2/firebase-firestore.js";
+
+  // Your Firebase configuration object
+  const firebaseConfig = {
+    apiKey: "AIzaSyAB-WbFZTQ8bfHA3W44Q9ithgDGWos1jss",
+    authDomain: "quietshelter-b5f54.firebaseapp.com",
+    projectId: "quietshelter-b5f54",
+    storageBucket: "quietshelter-b5f54.firebasestorage.app",
+    messagingSenderId: "964395764892",
+    appId: "1:964395764892:web:8cb55955d6f4a92f08f159",
+    measurementId: "G-9652RJX9SV"
+  };
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+  const db = getFirestore(app);
+
+  // JavaScript to handle the form submission
+  const contactForm = document.getElementById("contactForm");
+  const responseMessage = document.getElementById("responseMessage");
+
+  contactForm.addEventListener("submit", async (event) => {
+    event.preventDefault(); // Prevent form from refreshing the page
+
+    // Get form data
+    const name = document.getElementById("name").value;
+    const email = document.getElementById("email").value;
+    const message = document.getElementById("message").value;
+
+    try {
+      // Add data to Firestore
+      await addDoc(collection(db, "messages"), {
+        name: name,
+        email: email,
+        message: message,
+        timestamp: new Date().toISOString(),
+      });
+
+      // Show success message
+      responseMessage.style.display = "block";
+      responseMessage.textContent = "Message sent successfully!";
+
+      // Clear form
+      contactForm.reset();
+    } catch (error) {
+      console.error("Error adding document: ", error);
+      responseMessage.style.display = "block";
+      responseMessage.textContent = "Failed to send message. Please try again.";
+      responseMessage.style.color = "red";
+    }
+  });
+</script>
  
 <script src="script.js"></script>
   
