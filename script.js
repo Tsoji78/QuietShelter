@@ -199,15 +199,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
 //contact
   
-
-// Import the functions you need from the SDKs you need
-import { initializeApp } from "https://www.gstatic.com/firebasejs/11.2.0/firebase-app.js";
-import { getAnalytics } from "https://www.gstatic.com/firebasejs/11.2.0/firebase-analytics.js";
-// TODO: Add SDKs for Firebase products that you want to use
-// https://firebase.google.com/docs/web/setup#available-libraries
-
-// Your web app's Firebase configuration
-// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+// Your Firebase configuration object
+// Firebase configuration
 const firebaseConfig = {
   apiKey: "AIzaSyAB-WbFZTQ8bfHA3W44Q9ithgDGWos1jss",
   authDomain: "quietshelter-b5f54.firebaseapp.com",
@@ -219,7 +212,48 @@ const firebaseConfig = {
 };
 
 // Initialize Firebase
-const app = initializeApp(firebaseConfig);
-const analytics = getAnalytics(app);
+const app = firebase.initializeApp(firebaseConfig);
+const db = firebase.firestore();
 
+// JavaScript to handle the form submission
+document.addEventListener("DOMContentLoaded", () => {
+  console.log("Initializing Firebase...");
+  const app = firebase.initializeApp(firebaseConfig);
+  const db = firebase.firestore();
+  console.log("Firebase initialized:", app);
+  console.log("Firestore DB:", db);
+  const contactForm = document.getElementById("contactForm");
+  const responseMessage = document.getElementById("responseMessage");
 
+  contactForm.addEventListener("submit", async (event) => {
+    event.preventDefault(); // Prevent form from refreshing the page
+
+    // Get form data
+    const name = document.getElementById("name").value;
+    const email = document.getElementById("email").value;
+    const message = document.getElementById("message").value;
+
+    try {
+      // Add data to Firestore
+      await db.collection("messages").add({
+        name: name,
+        email: email,
+        message: message,
+        timestamp: new Date().toISOString(),
+      });
+
+      // Show success message
+      responseMessage.style.display = "block";
+      responseMessage.textContent = "Message sent successfully!";
+      responseMessage.style.color = "green";
+
+      // Clear form
+      contactForm.reset();
+    } catch (error) {
+      console.error("Error adding document: ", error);
+      responseMessage.style.display = "block";
+      responseMessage.textContent = "Failed to send message. Please try again.";
+      responseMessage.style.color = "red";
+    }
+  });
+});
