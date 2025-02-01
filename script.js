@@ -198,22 +198,6 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 //contact
-  
-// Your Firebase configuration object
-// Firebase configuration
-const firebaseConfig = {
-  apiKey: "AIzaSyAB-WbFZTQ8bfHA3W44Q9ithgDGWos1jss",
-  authDomain: "quietshelter-b5f54.firebaseapp.com",
-  projectId: "quietshelter-b5f54",
-  storageBucket: "quietshelter-b5f54.firebasestorage.app",
-  messagingSenderId: "964395764892",
-  appId: "1:964395764892:web:8cb55955d6f4a92f08f159",
-  measurementId: "G-9652RJX9SV"
-};
-
-// Initialize Firebase
-const app = firebase.initializeApp(firebaseConfig);
-const db = firebase.firestore();
 
 // JavaScript to handle the form submission
 document.addEventListener("DOMContentLoaded", () => {

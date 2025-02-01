@@ -6,6 +6,9 @@
   <meta name ="viewport" content = "width=device-width, initial-scale=1.0, maximum-scale=1.0">
   <title>QuietShelter Foundation</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <!-- Add Firebase SDK -->
+  <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-firestore-compat.js"></script>
   <link rel="stylesheet"  href="style.css">
   <link rel="stylesheet"  href="blog.css">
   <link rel="stylesheet"  href="navigation/nav.css">
@@ -38,143 +41,14 @@
       <h1 class="update-title" id="update">Our News Feeds</h1>
       <p><strong>Our Out-Reach every step of the way</strong></p>
     </div>
-  </section>
-
-  <section id="blog">
-    <!---heading-->
-    <div class="blog-heading">
-      <span>Blog Updates </span>
-    </div>
-
-    <!---blog container-->
-    <div class="blog-container">
-
-      <!---box 1-->
-      <div class="blog-box">
-      <!---img-->
-      <div class="blog-img">
-        <img src="images/wyy.jpg" alt="">
-      </div>
-      <!--text-->
-      <div class="blog-text">
-        <span>12 May 2021 / Youth Empowerment</span>
-        <a href="#blog.html" class="blog-title">Malkohi Women and Youth Empowerment</a>
-        <p>
-        The primary objective of the Malkohi Women and Youth Empowerment</br> Project is to
-        enhance the socio-economic status of women and youth</br> in the Malkohi region by
-        providing them with the skills, resources,</br>  and opportunities needed to achieve
-        self-sufficiency and contribute positively to their communities.
-        </p>
-        <a href="#blog.html">Read More</a>  
-      </div>
-
   
-    </div>
-
-
-  </section>
   <!-- In your HTML website -->
-  <section id="blog">
-    <div class="blog-heading">
-        <span>Blog Updates</span>
+  <h1>Latest Blog Posts</h1>
+    <div id="blog-container">
+        <div class="loading">Loading posts...</div>
     </div>
-    <div class="blog-container" id="blogContainer">
-        <!-- Loading state -->
-        <div id="loadingState">Loading blog posts...</div>
-    </div>
-  </section>
+   
 
-  <script type="module">
-    // Import Firebase
-    import { initializeApp } from 'https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js';
-    import { 
-        getFirestore, 
-        collection, 
-        query, 
-        orderBy, 
-        onSnapshot 
-    } from 'https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore.js';
-
-    // Your Firebase config (same as Next.js admin)
-    const firebaseConfig = {
-      apiKey: "AIzaSyAB-WbFZTQ8bfHA3W44Q9ithgDGWos1jss",
-      authDomain: "quietshelter-b5f54.firebaseapp.com",
-      projectId: "quietshelter-b5f54",
-      storageBucket: "quietshelter-b5f54.firebasestorage.app",
-      messagingSenderId: "964395764892",
-      appId: "1:964395764892:web:8cb55955d6f4a92f08f159",
-      measurementId: "G-9652RJX9SV"
-    };
-
-    // Initialize Firebase
-    const app = initializeApp(firebaseConfig);
-    const db = getFirestore(app);
-
-    function formatDate(dateString) {
-        const options = { year: 'numeric', month: 'long', day: 'numeric' };
-        return new Date(dateString).toLocaleDateString('en-US', options);
-    }
-
-    function truncateText(text, maxLength = 150) {
-        return text.length > maxLength ? text.substring(0, maxLength) + '...' : text;
-    }
-
-    function createBlogCard(blog) {
-        return `
-            <div class="blog-box">
-                <div class="blog-img">
-                    <img src="${blog.imageUrl || 'images/default.jpg'}" alt="${blog.title}">
-                </div>
-                <div class="blog-text">
-                    <span>${formatDate(blog.date)} / ${blog.categories}</span>
-                    <a href="blog/${blog.slug}" class="blog-title">${blog.title}</a>
-                    <p>${truncateText(blog.content)}</p>
-                    <a href="blog/${blog.slug}">Read More</a>
-                </div>
-            </div>
-        `;
-    }
-
-    // Real-time blog updates
-    function initializeBlogDisplay() {
-        const blogContainer = document.getElementById('blogContainer');
-        const loadingState = document.getElementById('loadingState');
-
-        // Create query with ordering
-        const blogsQuery = query(
-            collection(db, 'blogs'),
-            orderBy('createdAt', 'desc')
-        );
-
-        // Real-time listener
-        onSnapshot(blogsQuery, (snapshot) => {
-            loadingState.style.display = 'none';
-            const blogs = [];
-            
-            snapshot.forEach((doc) => {
-                if (doc.data().isPublished) {
-                    blogs.push({
-                        id: doc.id,
-                        ...doc.data()
-                    });
-                }
-            });
-
-            // Update DOM
-            blogContainer.innerHTML = blogs.length > 0 
-                ? blogs.map(blog => createBlogCard(blog)).join('')
-                : '<p>No blog posts available.</p>';
-        }, (error) => {
-            console.error("Error fetching blogs:", error);
-            blogContainer.innerHTML = `
-                <p>Error loading blog posts. Please refresh the page.</p>
-            `;
-        });
-    }
-
-  // Initialize when DOM is loaded
-  document.addEventListener('DOMContentLoaded', initializeBlogDisplay);
-</script>
   <button id="backToTop" title="Go to top">↑</button>
     
     <footer class="footer">
@@ -241,7 +115,8 @@
   
   
 
-<script src = "script.js"></Script>  
+<script src = "script.js"></Script>
+<script src="blog.js" ></script>  
 </body>
 
 </html>

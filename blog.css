@@ -43,127 +43,186 @@ body, html {
   margin-top: 1em;
   font-size: 1.25rem;
 }
+h1 {
+  text-align: center;
+  margin: 7rem 0;
+  font-size: clamp(1.8rem, 5vw, 2.5rem); /* Responsive font size */
+  color: #2c3e50;
+}
 
-#blog {
+/* Blog Container */
+#blog-container {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  padding: 2.5rem 5%; /* Adjusted padding for responsiveness */
-  background-color: rgba(40, 144, 241, 0.32);  /* More descriptive background color */
+  flex-wrap: wrap;
+  gap: 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 1rem;
 }
 
-.blog-heading {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}
-
-.blog-heading span {
-  color: rgb(255, 255, 255);
-  font-size: 3rem; /* Reduced size for responsiveness */
-  font-weight: 700;
-}
-
-.blog-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(18.75rem, 1fr)); /* Adjusted to rem */
-  gap: 1.25rem; /* Adjusted to rem */
-  margin: 1.25rem 0;
-  width: 40%;
-}
-
-.blog-box {
-  background-color: rgb(252, 251, 248);
-  border: 1px solid #f1ecec;
-  margin: 1.25rem;
-  border-radius: 1.875rem 0.625rem 0.625rem 0.625rem; /* Converted px to rem */
-  box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1); /* Added shadow for a modern look */
-}
-
-.blog-img {
-  width: 100%;
-  height: 18.75rem; /* Converted to rem */
-  padding: 0.625rem;
-}
-
-.blog-img img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center;
-  border-radius: 0.625rem; /* Converted px to rem */
-}
-
-.blog-text {
-  padding: 1.875rem; /* Adjusted to rem */
-  display: flex;
-  flex-direction: column;
-  margin: -1.25rem;
-}
-
-.blog-text span {
-  color: #0d0d0e;
-  font-size: 0.9rem;
-}
-
-.blog-text .blog-title {
-  font-size: 1.3rem;
-  font-weight: 500;
-  color: #030303;
-  transition: color 0.3s ease;
-}
-
-.blog-text .blog-title:hover {
-  color: #dbc710;
-}
-
-.blog-text p {
-  color: #111111;
-  font-size: 0.9rem;
-  display: -webkit-box;
-  -webkit-line-clamp: 3;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  margin: 1.25rem 0; /* Adjusted to rem */
-}
-
-.blog-text a {
-  color: #4308e6;
-}
-
-.blog-text a:hover {
-  color: #e6d008;
-}
-
-/* Author Section */
-/*.author {
-  display: flex;
-  align-items: center;
-  margin-top: 1.25rem; /* Adjusted to rem 
-}*/
-
-/*.author img {
-  border-radius: 50%;
-  width: 1.3%; /* Adjusted size 
-  height: 1.3%; /* Adjusted size 
-  
-}
-
-.author-name {
-  font-size: 1rem;
-  color: #111111;
-}*/
-
-/* Media Queries for Responsiveness */
-
-/* For large screens and tablets */
-@media (max-width: 1250px) {
-  .blog-container {
-    grid-template-columns: repeat(2, 1fr); /* 2 columns for medium screens */
+@supports (grid-template-columns: repeat(auto-fit, minmax(300px, 1fr))) {
+  #blog-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      flex-wrap: initial;
   }
+}
+
+/* Post Card */
+.post-card {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.post-card:hover {
+  transform: translateY(-5px);
+}
+
+/* Post Image */
+.post-image {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16/9; /* Maintain proportions */
+  object-fit: cover;
+  border-bottom: 3px solid #3498db;
+}
+
+/* Post Content */
+.post-content {
+  padding: 1.5rem;
+}
+
+.post-title {
+  font-size: 1.5rem;
+  margin-bottom: 0.75rem;
+  color: #1b73cc;
+}
+
+.post-date {
+  font-size: 0.9rem;
+  color: #df6329;
+  margin-bottom: 0.5rem;
+  margin-left: 1rem;
+}
+
+.post-content div {
+  color: #34495e;
+  margin-bottom: 1rem;
+  line-height: 1.7;
+}
+
+.post-author {
+  font-style: italic;
+  color: #857d11;
+  margin:1rem;
+}
+
+.post-categories {
+  display: inline-block;
+  background: #0d59e63d;
+  padding: 0.3rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  margin:0.1rem 0.8rem;
+}
+.read-more{
+  color: #3498db;
+  
+
+
+}
+
+/* Loading and Error States */
+.loading {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #7f8c8d;
+  padding: 2rem;
+  grid-column: 1 / -1;
+}
+
+.error {
+  color: #e74c3c;
+  padding: 2rem;
+  text-align: center;
+  grid-column: 1 / -1;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  #blog-container {
+      grid-template-columns: 1fr;
+      padding: 0;
+  }
+
+  h1 {
+      font-size: 2rem;
+  }
+
+  .post-image {
+      height: auto;
+  }
+
+  .post-content {
+      padding: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+
+  .post-title {
+      font-size: 1.3rem;
+  }
+
+  .post-date {
+      font-size: 0.8rem;
+  }
+}
+
+/* Ultra-Small Phones (Galaxy Fold, etc.) */
+@media (max-width: 330px) {
+  .post-title {
+      font-size: 1.2rem;
+  }
+  .post-content div {
+      font-size: 0.95rem;
+  }
+}
+
+/* Large Desktops (4K+) */
+@media (min-width: 1600px) {
+  #blog-container {
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  }
+}
+
+/* Touch Target Sizing for Mobile */
+.post-categories,
+.post-author {
+  min-height: 44px; /* Minimum touch target size */
+  display: inline-flex;
+  align-items: center;
+}
+
+/* Utility Classes */
+.text-center {
+  text-align: center;
+}
+
+.mb-2 {
+  margin-bottom: 2rem;
+}
+
+/* Smooth transitions for dynamic content */
+[data-aos] {
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+@media (max-width: 1250px) {
+  
 
   .update-container h1 {
     font-size: 3rem;
@@ -176,13 +235,7 @@ body, html {
 
 /* For tablets and medium devices */
 @media (max-width: 768px) {
-  .blog-container {
-    grid-template-columns: 1fr; /* One column for smaller screens */
-  }
 
-  .blog-text {
-    padding: 1.25rem; /* Adjust padding for smaller screens */
-  }
 
   .update-container h1 {
     font-size: 2.8rem;
@@ -195,22 +248,7 @@ body, html {
 
 /* For mobile devices */
 @media (max-width: 550px) {
-  .blog-container {
-    display: grid;
-    width: 95%;
-  }
-  
-  .blog-box {
-    margin: 1.25rem 0.625rem; /* Adjusted to rem */
-  }
-
-  .blog-img {
-    height: 12.5rem; /* Converted to rem */
-  }
-
-  .blog-text span {
-    font-size: 0.8rem;
-  }
+ 
 
   .update-container h1 {
     font-size: 2.4rem;
