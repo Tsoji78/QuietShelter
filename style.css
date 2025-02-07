@@ -311,7 +311,7 @@ section {
 
 .footer-section {
   display: flex;
-  flex-direction: column;
+  flex-direction:column;
   gap: 1.5rem;
 }
 
@@ -503,7 +503,8 @@ section {
   }
 
   .footer-section {
-      align-items: center;
+      align-items: flex;
+      flex: 2 2 calc(50% - 4rem);
   }
 
   .social-links {
